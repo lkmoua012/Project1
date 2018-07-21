@@ -104,19 +104,20 @@ $("#thisbutton").on("click", function() {
           alert("You're NOT a member for exclusive access to all SECRETS -- PAY the monthly fee of $99.99!");
         });
 
-        $("#home").on("click", function() {
+        // $("#home").on("click", function() {
 
            
 
-          var videoElement = document.createElement("video");
-        var appendVideo = videoElement.setAttribute("src", "Marvel_Opening_Theme.avi");
-        var vid = document.getElementById("video"); 
+        // var videoElement = document.createElement("video");
+      //  var appendVideo = videoElement.setAttribute("src", "Marvel_Opening_Theme.avi");
+        // var vid = document.getElementById("video"); 
+        // $("#video").append(appendVideo);
 
-                function playVid() { 
-                    vid.play(); 
-                  }
+        //          function playVid() { 
+        //             vid.play(appendVideo); 
+        //           }
 
-        });
+        // });
 
         
       
