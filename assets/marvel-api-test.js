@@ -1,19 +1,27 @@
 $(function() {
-    console.log( 'ready!' );
 
-    var queryURL = "https://gateway.marvel.com:443/v1/public/characters?name=venom&apikey=3729b58ef60ba8affe97db66144af1c2";
+  var charName = "daredevil";
 
-    library(digest)
-    hash <- digest(paste0(ts,"11395b9ee9af264f1d4b2097a38b1548c0d4c64f","3729b58ef60ba8affe97db66144af1c2"), algo="md5")
+  var queryURL = "https://gateway.marvel.com:443/v1/public/characters?name="+ charName + "&apikey=3729b58ef60ba8affe97db66144af1c2";
 
-    $.ajax({
-        url: queryURL,
-        method: "GET"
-      }).then(function(response) {
-        console.log(response);
-    
-      });
-      //^ End of AJAX
+  $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function(response) {
+
+      var portrait = (response.data.results[0].thumbnail.path + "." + response.data.results[0].thumbnail.extension);
+
+      $(".portrait").append("<img src='" + portrait + "' />");
+      $(".charName").append(response.data.results[0].name);
+      $(".description").append(response.data.results[0].description);
+
+      console.log(response);
+      console.log(portrait);
+
+    });
+    //^ End of AJAX
 
 });
 //^ End of Document Ready
+
+
