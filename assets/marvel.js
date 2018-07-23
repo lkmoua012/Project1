@@ -6,9 +6,77 @@ $(document).ready(function() {
 
     $("#photoButton").on("click", function() {
 
-        $("img").attr("src", "images/Spiderman.jpg");
+        $("img").attr("src", "https://78.media.tumblr.com/2f92e5d094c732a89d5c9768748688e2/tumblr_mf3q7euz2k1s0qnhlo1_500.gif");
 
       });
+
+      
+        // Spiderman Theme
+        var audioElementSpidey = document.createElement("audio");
+        audioElementSpidey.setAttribute("src", "assets/music/Spider-Man.mp3");
+
+        $("#themeSpidey").on("click", function() {
+          audioElementSpidey.play();
+        });
+        
+        // Wolverine Theme
+        var audioElementWolf = document.createElement("audio");
+        audioElementWolf.setAttribute("src", "assets/music/TheWolverine.mp3");
+
+        $("#themeWolverine").on("click", function() {
+          audioElementWolf.play();
+        });
+
+        // Hulk Theme
+        var audioElementHulk = document.createElement("audio");
+        audioElementHulk.setAttribute("src", "assets/music/Incredible_Hulk.mp3");
+
+        $("#themeHulk").on("click", function() {
+          audioElementHulk.play();
+        });
+
+        // Magneto Theme
+        var audioElementMag = document.createElement("audio");
+        audioElementMag.setAttribute("src", "assets/music/MagnetoSuperTheme.mp3");
+
+        $("#themeMagneto").on("click", function() {
+          audioElementMag.play();
+        });
+
+        // Venom Theme
+        var audioElementVen = document.createElement("audio");
+        audioElementVen.setAttribute("src", "assets/music/Venomtheme.mp3");
+
+        $("#themeVenom").on("click", function() {
+          audioElementVen.play();
+        });
+
+        // Sabretooth Theme
+        var audioElementSab = document.createElement("audio");
+        audioElementSab.setAttribute("src", "assets/music/Sabretooth_lab_fight.mp3");
+
+        $("#themeSabre").on("click", function() {
+          audioElementSab.play();
+        });
+
+        // Stop playback for all theme songs
+        $(".pause-button").on("click", function() {
+
+          
+          audioElementSpidey.pause();
+          audioElementWolf.pause();
+          audioElementHulk.pause();
+          audioElementMag.pause();
+          audioElementVen.pause();
+          audioElementSab.pause();
+
+          
+        });
+
+      });
+
+
+
 
     // $("#home").on("click", function() {
 
@@ -27,4 +95,4 @@ $(document).ready(function() {
 
     
   
-  });
+  
