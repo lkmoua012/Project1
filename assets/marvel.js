@@ -1,4 +1,4 @@
-var activeName = "Spider-Man";
+var activeName = "";
 
 $(document).ready(function() {
 
@@ -22,23 +22,16 @@ $(document).ready(function() {
     //           }
 
     // });
-  
-  marvelAPI();
 
-  $("#div a").click(function(){
-    var text = $(this).text();
-    console.log(text);
+  $(".char").click(function() {
+    
+    activeName = $(this).text();
+    marvelAPI();
+
   });
   
 });
 //^ End Document Ready
-
-function pullChar() {
-
-  activeName = "Daredevil";
-  marvelAPI();
-
-};
 
 function marvelAPI() {
 
