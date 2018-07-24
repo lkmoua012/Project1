@@ -6,12 +6,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link rel="stylesheet" type="text/css" href="wfhmarvel.css">
+  
 
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" crossorigin="anonymous">
 
+  <link rel="stylesheet" type="text/css" href="assets/marvel.css">
 
   <title>Marvel</title>
 </head>
@@ -122,7 +123,7 @@
 
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 
-                  <a class="dropdown-item" href="javascript:alert('hello');">Daredevil</a>
+                  <a class="dropdown-item" href="#">Daredevil</a>
                   <a class="dropdown-item" href="#">Options</a>
                   <a class="dropdown-item" href="#">Options</a>
 
@@ -153,16 +154,16 @@
 
             <div id="photo_fill" class="card" style="width: 18rem;">
 
-              <img class="card-img-top" src=".../100px180/" alt="image">
+              <img class="card-img-top portrait" src="" alt="image">
 
               <div class="card-body">
 
-                <h5 class="card-title">Photo/Text Card</h5>
+                <h5 class="card-title charName">Photo/Text Card</h5>
 
-                <p id="text_fill" class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae debitis rem aperiam doloremque officiis dolor
+                <p id="text_fill" class="card-text description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae debitis rem aperiam doloremque officiis dolor
                   minus neque tempora repellat eaque id, optio quam ad fugit distinctio aliquam magnam nemo sit!</p>
 
-                <a href="#" class="btn btn-primary">photo/text button</a>
+                <a id="photoButton" href="#" class="btn btn-primary">photo/text button</a>
 
               </div>
 
@@ -175,7 +176,7 @@
             <!-- 16:9 aspect ratio video player to append through js -->
             <div class="embed-responsive embed-responsive-16by9">
 
-              <iframe class="embed-responsive-item" src="..."></iframe>
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/HStPxrLfM9k" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
             </div>
 
@@ -184,7 +185,7 @@
             <!-- 16:9 aspect ratio video player to append through js -->
             <div class="embed-responsive embed-responsive-16by9">
 
-              <iframe class="embed-responsive-item" src="..."></iframe>
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/SUtziaZlDeE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
             </div>
 
@@ -286,6 +287,7 @@
       <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" crossorigin="anonymous"></script>
+      <script src="assets/marvel.js"></script>
 </body>
 
 </html>

@@ -2,7 +2,7 @@ $(function() {
 
   var charName = "daredevil";
 
-  var queryURL = "https://gateway.marvel.com:443/v1/public/characters?name="+ charName + "&apikey=3729b58ef60ba8affe97db66144af1c2";
+  var queryURL = "https://gateway.marvel.com:443/v1/public/characters?name="+ charName + "&ts=1&apikey=3729b58ef60ba8affe97db66144af1c2&hash=8a8767c9ba9a5c15ae56cd72bc2718e9";
 
   $.ajax({
       url: queryURL,
