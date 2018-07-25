@@ -165,7 +165,7 @@ $(document).ready(function() {
 
 
 
-  });
+
 
     $("#photoButton").on("click", function() {
 
@@ -296,8 +296,6 @@ $(document).ready(function() {
           break;
         }
       });
-
-});
 
 function marvelAPI() {
 
