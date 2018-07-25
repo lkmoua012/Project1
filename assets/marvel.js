@@ -266,7 +266,7 @@ $(document).ready(function() {
           // Magneto Theme
         
         });
-      });
+     });
 
       // Keyboard move controls
       $(document).keyup(function(e) {
@@ -297,7 +297,7 @@ $(document).ready(function() {
         }
       });
 
-});
+    });
 
 function marvelAPI() {
 
