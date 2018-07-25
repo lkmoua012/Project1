@@ -1,3 +1,5 @@
+var activeName = "";
+
 $(document).ready(function() {
 
     
