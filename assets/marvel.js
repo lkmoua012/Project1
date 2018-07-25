@@ -1,37 +1,37 @@
 // VERIFICATION MODAL
-window.onload = function() {
+// window.onload = function() {
 
-    var age_form = $('#verify .age form'),
-          modal = $('#verify');
-      if ( localStorage.getItem('isOldEnough') === 'yes' ) {
-          modal.remove();
-      }
-      function meetsMinimumAge(birthDate, minAge) {
-          var tempDate = new Date(birthDate.getFullYear() + minAge, birthDate.getMonth(), birthDate.getDate());
-          return (tempDate <= new Date());
-      }
-      age_form.submit(function(e){
+//     var age_form = $('#verify .age form'),
+//           modal = $('#verify');
+//       if ( localStorage.getItem('isOldEnough') === 'yes' ) {
+//           modal.remove();
+//       }
+//       function meetsMinimumAge(birthDate, minAge) {
+//           var tempDate = new Date(birthDate.getFullYear() + minAge, birthDate.getMonth(), birthDate.getDate());
+//           return (tempDate <= new Date());
+//       }
+//       age_form.submit(function(e){
           
-          e.preventDefault();
+//           e.preventDefault();
           
-          var $this = $(this),
-              month = parseInt($this.find('select[name=month]').val(), 10),
-              day = parseInt($this.find('select[name=day]').val(), 10),
-              year = parseInt($this.find('select[name=year]').val(), 10),
-              birthday = new Date(year, month, day);
-              console.log(birthday);
-          if ( meetsMinimumAge(birthday, 18) ) {
-              modal.remove();
-              localStorage.setItem('isOldEnough', 'yes');
-          } else {
-              modal.find('.denied').fadeIn('fast');
-          }
-      });
-      $('#verify')
-          .height( $(document).height() )
-          .width( $(document).width() );
+//           var $this = $(this),
+//               month = parseInt($this.find('select[name=month]').val(), 10),
+//               day = parseInt($this.find('select[name=day]').val(), 10),
+//               year = parseInt($this.find('select[name=year]').val(), 10),
+//               birthday = new Date(year, month, day);
+//               console.log(birthday);
+//           if ( meetsMinimumAge(birthday, 18) ) {
+//               modal.remove();
+//               localStorage.setItem('isOldEnough', 'yes');
+//           } else {
+//               modal.find('.denied').fadeIn('fast');
+//           }
+//       });
+//       $('#verify')
+//           .height( $(document).height() )
+//           .width( $(document).width() );
   
-      };
+//       };
 // END OF VERIFICATION MODAL
 
 var activeName = "";
@@ -165,7 +165,7 @@ $(document).ready(function() {
 
 
 
-  });
+  
 
     $("#photoButton").on("click", function() {
 
@@ -266,7 +266,7 @@ $(document).ready(function() {
           // Magneto Theme
         
         });
-      });
+      
 
       // Keyboard move controls
       $(document).keyup(function(e) {

@@ -45,7 +45,7 @@
     
                 <select name="day" id="day">
                     {% for day in (1..31) %}
-                        <!-- <option value="{{ day }}">{{ day }}</option> -->
+                        <option value="{{ day }}">{{ day }}</option>
                         <option value="0">1</a>
                         <option value="1">2</a>
                         <option value="2">3</a>
@@ -77,14 +77,14 @@
                         <option value="28">29</a>
                         <option value="29">30</a>
                         <option value="30">31</a>
-                    <!-- {% endfor %} -->
+                     {% endfor %} -->
                 </select>
     
-                    <!-- {% assign this_year = 'now' | date: "%Y" %} -->
+                     {% assign this_year = 'now' | date: "%Y" %} -->
     
                 <select name="year" id="year">
                     {% for year in (1900..this_year) %}
-                        <!-- <option value="{{ year }}">{{ year }}</option> -->
+                       <option value="{{ year }}">{{ year }}</option> -->
                         <option value="2018">2018</a>
                         <option value="2017">2017</a>
                         <option value="2016">2016</a>
@@ -186,7 +186,7 @@
                         <option value="1920">1920</a>
                         <option value="1919">1919</a>
                         <option value="1918">1918</a>
-                    <!-- {% endfor %} -->
+                     {% endfor %} -->
                 </select>        
     
                 <br> &nbsp; <br>
@@ -201,7 +201,7 @@
         
         </div>
     
-    </div>
+    </div> -->
     <!-- END OF AGE VERIFICATION MODAL -->
 
 
