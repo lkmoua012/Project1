@@ -1,4 +1,5 @@
 var activeName = "";
+var idName = "";
 
 $(document).ready(function() {
 
@@ -9,8 +10,6 @@ $(document).ready(function() {
   });
 
     // $("#home").on("click", function() {
-
-       
 
     // var videoElement = document.createElement("video");
     // var appendVideo = videoElement.setAttribute("src", "Marvel_Opening_Theme.avi");
@@ -26,7 +25,9 @@ $(document).ready(function() {
   $(".char").click(function() {
     
     activeName = $(this).text();
+    idName = $(this).attr("id");
     marvelAPI();
+    marvelYoutube();
 
   });
   
@@ -53,4 +54,31 @@ function marvelAPI() {
 
     });
     //^ End of AJAX
+};
+
+function marvelYoutube() {
+
+  var youtubeSrc = "https://www.youtube.com/embed/";
+
+  if (idName === "spiderman"){
+
+    //set youtube id src to spider man video
+    //set youtube id src to spider man video
+
+  };
+
+  if (idName === "daredevil"){
+
+    $("#youtubePlayer1").attr("src", (youtubeSrc + "B66feInucFY"));
+    $("#youtubePlayer2").attr("src", (youtubeSrc + "KFYFh8w4758"));
+
+  };
+
+  if (idName === "captainamerica"){
+
+    $("#youtubePlayer1").attr("src", (youtubeSrc + "HFjMy3dqmgU"));
+    $("#youtubePlayer2").attr("src", (youtubeSrc + "BHyO8ztfE8k"));
+
+  };
+
 };
