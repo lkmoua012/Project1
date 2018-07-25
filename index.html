@@ -11,9 +11,7 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" crossorigin="anonymous">
-   <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-  <link rel="stylesheet" type="text/css" href="assets/materialize.css">
+
   <link rel="stylesheet" type="text/css" href="assets/marvel.css">
 
   
@@ -215,7 +213,71 @@
 
       <div id="full_bar" class="col-12">
 
-       
+        <!-- Top navigation bar full width -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+<!-- MIKE added h1ID to h1 MARVEL -->
+          <h1 id="h1ID">MARVEL</h1>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+            aria-expanded="false" aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+
+          </button>
+<!-- MIKE added navbar-dark to make the text a light color -->
+          <div class="collapse navbar-collapse navbar-dark" id="navbarNavDropdown">
+
+            <ul class="navbar-nav">
+
+              <li class="nav-item ">
+
+                <a class="nav-link" href="index.html">Home Page
+                  <span class="sr-only">(current)</span>
+
+                </a>
+
+              </li>
+
+              <li class="nav-item ">
+
+                <a class="nav-link" href="#">About this Site</a>
+
+              </li>
+
+              <li class="nav-item ">
+
+                <a class="nav-link" href="#">Contact Us</a>
+
+              </li>
+
+              <li class="nav-item dropdown">
+
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">
+
+                  Dropdown
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+
+                  <a class="dropdown-item" href="#">Options</a>
+                  <a class="dropdown-item" href="#">Options</a>
+                  <a class="dropdown-item" href="#">Options</a>
+                  <a class="dropdown-item" href="#">Options</a>
+                  <a class="dropdown-item" href="#">Options</a>
+                  <a class="dropdown-item" href="#">Options</a>
+
+                </div>
+
+              </li>
+
+            </ul>
+
+          </div>
+
+        </nav>
+
       </div>
 
     </div>
@@ -444,7 +506,7 @@
               width:100%;
               border: 5px ridge darkslategray;
               padding: 5px;
-              background:rgb(3, 3, 3);
+              background:darkred;
               color:white;
               font-weight:bold;
               font-size:18px;
@@ -474,9 +536,7 @@
       <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" crossorigin="anonymous"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
       <script src="assets/marvel.js"></script>
 </body>
 
 </html>
-
