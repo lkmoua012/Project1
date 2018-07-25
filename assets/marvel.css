@@ -1,0 +1,71 @@
+body {
+    background-image: url("images/marvel1.jpeg");
+    background-size: 100% 100%;
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+    
+}
+
+main {
+    flex: 1 0 auto;
+  }
+
+
+#h1ID {
+    color:white;
+    background-color: rgb(226,54,54);
+    padding-top:0px;
+}
+
+#navbarNavDropdown {
+    background-color:rgb(226,54,54);
+    color: white;
+    float: right;
+    margin-left:650px;
+
+}
+
+.header5 {
+    color: black;
+    padding-bottom:7px;
+}
+
+
+
+.navbar {
+    width:40%;
+    height:80%;
+    margin-right:20%;
+    
+}
+
+a:link {
+
+    color: blue;
+    cursor: url("images/spidey_Mjd_icon.ico"), default;
+    
+    }
+    
+    a:visited {
+    
+    color: green;
+    cursor: url("images/spidey_Mjd_icon.ico"), default;
+    
+    }
+    
+    a:hover {
+    
+    color: yellow;
+    cursor: url("images/spidey_Mjd_icon.ico"), default;
+    }
+
+
+    #red_gem {
+        background-image: url("images/red_gem.png");
+
+    }
+
+    nav .brand-logo {
+        margin-left: 3%;
+    }
