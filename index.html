@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  
+  <title>Marvel</title>
 
 
   <!-- Bootstrap CSS -->
@@ -14,7 +14,7 @@
 
   <link rel="stylesheet" type="text/css" href="assets/marvel.css">
 
-  <title>Marvel</title>
+  
 </head>
 
 <body>
@@ -44,7 +44,7 @@
 
               <li class="nav-item ">
 
-                <a class="nav-link" href="#">Link
+                <a class="nav-link" href="#">Home Page
                   <span class="sr-only">(current)</span>
 
                 </a>
@@ -53,13 +53,13 @@
 
               <li class="nav-item ">
 
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">About this Site</a>
 
               </li>
 
               <li class="nav-item ">
 
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">Contact Us</a>
 
               </li>
 
@@ -68,14 +68,17 @@
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true"
                   aria-expanded="false">
 
-                  Dropdown link
+                  Heroes and Villains
                 </a>
 
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 
-                  <a class="dropdown-item" href="#">Options</a>
-                  <a class="dropdown-item" href="#">Options</a>
-                  <a class="dropdown-item" href="#">Options</a>
+                  <a class="dropdown-item" href="#">Spider-Man</a>
+                  <a class="dropdown-item" href="#">Wolverine</a>
+                  <a class="dropdown-item" href="#">Hulk</a>
+                  <a class="dropdown-item" href="#">Magneto</a>
+                  <a class="dropdown-item" href="#">Venom</a>
+                  <a class="dropdown-item" href="#">Sabretooth</a>
 
                 </div>
 
@@ -118,14 +121,14 @@
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true"
                   aria-expanded="false">
 
-                  Characters
+                  Marvel Events
                 </a>
 
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 
-                  <a class="dropdown-item char" href="#">Daredevil</a>
-                  <a class="dropdown-item char" href="#">Spider-Man</a>
-                  <a class="dropdown-item char" href="#">Captain America</a>
+                  <a class="dropdown-item" href="#">Infinity Wars</a>
+                  <a class="dropdown-item" href="#">Options</a>
+                  <a class="dropdown-item" href="#">Options</a>
 
                 </div>
 
@@ -138,6 +141,7 @@
         </nav>
 
       </div>
+
 
       <br>
       <br>
@@ -154,16 +158,19 @@
 
             <div id="photo_fill" class="card" style="width: 18rem;">
 
-              <img class="card-img-top portrait" src="" alt="image">
+              <img class="card-img-top" src="" alt="image">
 
               <div class="card-body">
 
-                <h5 class="card-title charName">Photo/Text Card</h5>
+                <h5 class="card-title">Marvel Comics</h5>
 
-                <p id="text_fill" class="card-text description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae debitis rem aperiam doloremque officiis dolor
-                  minus neque tempora repellat eaque id, optio quam ad fugit distinctio aliquam magnam nemo sit!</p>
+                <p id="text_fill" class="card-text">Marvel Comics is the common name and primary imprint of Marvel Worldwide Inc., formerly Marvel Publishing, Inc. and Marvel Comics Group, a publisher of American comic books and related media. In 2009, The Walt Disney Company acquired Marvel Entertainment, Marvel Worldwide's parent company.
 
-                <a id="photoButton" href="#" class="btn btn-primary">photo/text button</a>
+                  Marvel started in 1939 as Timely Publications, and by the early 1950s, had generally become known as Atlas Comics. The Marvel branding began in 1961, the year that the company launched The Fantastic Four and other superhero titles created by Stan Lee, Jack Kirby, Steve Ditko, and many others.
+                  
+                  Marvel counts among its characters such well-known superheroes as Captain America, Iron Man, Thor, Spider-Man, Wolverine, the Hulk, Daredevil, Ghost Rider, Dr. Strange, Punisher, and such teams as the Avengers, the X-Men and the Fantastic Four, and antagonists including Doctor Doom, the Red Skull, the Green Goblin, Thanos, Ultron, Doctor Octopus, Magneto, Venom, and Loki. Most of Marvel's fictional characters operate in a single reality known as the Marvel Universe, with most locations mirroring real-life places; many major characters are based in New York City.</p>
+
+                <a id="photoButton" href="#" class="btn btn-primary">Click Me!</a>
 
               </div>
 
@@ -171,12 +178,48 @@
 
           </div>
 
+          <div class="col"><div class="col-lg-6">
+            <!-- Wolverine Image -->
+           <img src="assets/images/Magneto.png" alt="This is a png Magneto image with transparent background" class="img magneto" style="position:absolute; top:110px; left: 80px; z-index: -20; height: 300px">
+           <img src="assets/images/forcefield.png" alt="This is a png forcefield image with transparent background" id="shield" style="display: none; position:absolute; top:110px; left: 80px; z-index: -20; height: 300px">
+         </div></div>
+
+         <div id="buttons">
+          <button id="thisbutton" data-person="Magneto Supervillain">
+            We are Homo-Superior!
+          </button>
+
+          <div class="col" style="position: absolute; width:400px; float: right; top:800px; left: 460px;"><div id="moveControls" class="card">
+              <h4 class="card-header">Move Controls</h4>
+              <div class="card-body">
+                <div class="text-center mb-1">
+                  <button class="btn btn-dark btn-lg fa fa-arrow-up up-button">Up</button>
+                </div>
+                <div class="text-center">
+                  <button class="btn btn-dark btn-lg fa fa-arrow-left left-button">Left</button>
+                  <button class="btn btn-dark btn-lg fa fa-arrow-down down-button">Down</button>
+                  <button class="btn btn-dark btn-lg fa fa-arrow-right right-button">Right</button>
+                </div>
+                <br>
+                <div class="text-center">
+                  <button class="btn btn-dark btn-lg back-button">
+                    <span class="fa fa-comment"></span> Fly back!</button>
+                </div>
+                <br>
+                <div class="text-center">
+                  <button class="btn btn-dark btn-lg forcefield-button">
+                    <span class="fa fa-comment"></span> Magnetize!</button>
+                </div>
+              </div>
+                            </div>
+          </div>
+
           <div class="col-5">
 
             <!-- 16:9 aspect ratio video player to append through js -->
             <div class="embed-responsive embed-responsive-16by9">
 
-              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/HStPxrLfM9k" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/UhVjp48U2Oc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
             </div>
 
@@ -185,7 +228,8 @@
             <!-- 16:9 aspect ratio video player to append through js -->
             <div class="embed-responsive embed-responsive-16by9">
 
-              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/SUtziaZlDeE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/QwievZ1Tx-8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 
             </div>
 
@@ -216,37 +260,64 @@
 
           <div class="col-2">
 
-            <button class="btn btn-primary" type="submit">Button</button>
+            <div class="col"><div id="musicControls" class="text-center">
+              <button id="themeSpidey" class="btn btn-warning btn-xs theme-button">
+                <span class="fa fa-music"></span> Spider-Man Theme!</button>
+            </div></div>
+            
+          </div>
+
+          <div class="col-2">
+
+            <div class="col"><div id="musicControls" class="text-center">
+              <button id="themeWolverine" class="btn btn-warning btn-xs theme-button">
+                <span class="fa fa-music"></span> Wolverine Theme!</button>
+            </div></div>
 
           </div>
 
           <div class="col-2">
 
-            <button class="btn btn-primary" type="submit">Button</button>
+            <div class="col"><div id="musicControls" class="text-center">
+              <button id="themeHulk" class="btn btn-warning btn-xs theme-button">
+                <span class="fa fa-music"></span> Hulk Theme!</button>
+            </div></div>
 
           </div>
 
           <div class="col-2">
 
-            <button class="btn btn-primary" type="submit">Button</button>
+            <div class="col"><div id="musicControls" class="text-center">
+              <button id="themeMagneto" class="btn btn-warning btn-xs theme-button">
+                <span class="fa fa-music"></span> Magneto Theme!</button>
+            </div></div>
 
           </div>
 
           <div class="col-2">
 
-            <button class="btn btn-primary" type="submit">Button</button>
+            <div class="col"><div id="musicControls" class="text-center">
+              <button id="themeVenom" class="btn btn-warning btn-xs theme-button">
+                <span class="fa fa-music"></span> Venom Theme!</button>
+            </div></div>
 
           </div>
 
           <div class="col-2">
 
-            <button class="btn btn-primary" type="submit">Button</button>
+            <div class="col"><div id="musicControls" class="text-center">
+              <button id="themeSabre" class="btn btn-warning btn-xs theme-button">
+                <span class="fa fa-music"></span> Sabretooth Theme!</button>
+            </div></div>
 
           </div>
 
-          <div class="col-2">
+          <div class="col-2" style="display: block; margin-top: 10px; margin-left: auto; margin-right: auto;">
 
-            <button class="btn btn-primary" type="submit">Button</button>
+            <div class="col"><div id="musicControls" class="text-center">
+              <button class="btn btn-dark btn-xs pause-button">
+                <span class="fa fa-pause"></span> End Songs</button>
+            </div></div>
 
           </div>
 
