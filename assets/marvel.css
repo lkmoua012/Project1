@@ -11,6 +11,8 @@ body {
     background-color: rgb(226,54,54);
 }
 
+
+
 #navbarNavDropdown {
     background-color:rgb(226,54,54);
     color: white;
@@ -19,22 +21,4 @@ body {
 
 }
 
-a:link {
 
-    color: blue;
-    
-    
-    }
-    
-    a:visited {
-    
-    color: green;
-    
-    
-    }
-    
-    a:hover {
-    
-    color: yellow;
-    cursor: url("assets/images/spidey_Mjd_icon.ico"), default;
-    }

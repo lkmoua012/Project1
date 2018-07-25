@@ -24,24 +24,127 @@ function marvelAPI() {
 
 $(document).ready(function() {
 
+  $("footer").hide();
+
+  $(".moveChar").hide();
+
   $(".char").click(function() {
      
        activeName = $(this).text();
        marvelAPI();
+
+       
     
       });
 
-    
+      //Moveable Characters
+
+      $("#mag").click(function() {
+     
+        let wallMag = "assets/images/magnetowallpaper.jpg";
+        $('body').css('background-image', 'url(' + wallMag + ')');
+        $(".moveChar").show();
+        $(".moveChar").attr("src", "assets/images/Magneto.png");
+        $("footer").show();
+        $(".forcefield-button").show();
+        
+     
+       });
+
+       $("#dare").click(function() {
+     
+        let wallSpide = "assets/images/daredevilwallpaper.jpg";
+        $('body').css('background-image', 'url(' + wallSpide + ')');
+        $(".moveChar").show();
+        $(".moveChar").attr("src", "assets/images/daredevil.png");
+        $("footer").show();
+        $(".forcefield-button").hide();
+        
+     
+       });
+
+       $("#spide").click(function() {
+     
+        let wallDev = "assets/images/spideywallpaper.jpg";
+        $('body').css('background-image', 'url(' + wallDev + ')');
+        $(".moveChar").show();
+        $(".moveChar").attr("src", "assets/images/Spidey.png");
+        $("footer").show();
+        $(".forcefield-button").hide();
+        
+     
+       });
+
+       $("#ven").click(function() {
+     
+        let wallVen = "assets/images/venomwallpaper.jpg";
+        $('body').css('background-image', 'url(' + wallVen + ')');
+        $(".moveChar").show();
+        $(".moveChar").attr("src", "assets/images/venom.png");
+        $("footer").show();
+        $(".forcefield-button").hide();
+        
+     
+       });
+
+       $("#sabre").click(function() {
+     
+        let wallSabre = "assets/images/sabretoothwallpaper.jpg";
+        $('body').css('background-image', 'url(' + wallSabre + ')');
+        $(".moveChar").show();
+        $(".moveChar").attr("src", "assets/images/Sabretooth.png");
+        $("footer").show();
+        $(".forcefield-button").hide();
+        
+     
+       });
+
+       $("#wolv").click(function() {
+     
+        let wallWolv = "assets/images/wolverinewallpaper.jpg";
+        $('body').css('background-image', 'url(' + wallWolv + ')');
+        $(".moveChar").show();
+        $(".moveChar").attr("src", "assets/images/wolv.png");
+        $("footer").show();
+        $(".forcefield-button").hide();
+        
+     
+       });
+
+       $("#capt").click(function() {
+     
+        let wallCapt = "assets/images/captainwallpaper.jpg";
+        $('body').css('background-image', 'url(' + wallCapt + ')');
+        $(".moveChar").show();
+        $(".moveChar").attr("src", "assets/images/captain.png");
+        $("footer").show();
+        $(".forcefield-button").hide();
+        
+     
+       });
+
+       $("#hulk").click(function() {
+     
+        let wallHulk = "assets/images/hulkwallpaper.jpg";
+        $('body').css('background-image', 'url(' + wallHulk + ')');
+        $(".moveChar").show();
+        $(".moveChar").attr("src", "assets/images/hulktr.jpg");
+        $("footer").show();
+        $(".forcefield-button").hide();
+        
+     
+       });
 
     
 
     $("#photoButton").on("click", function() {
 
-        $("img").attr("src", "https://78.media.tumblr.com/2f92e5d094c732a89d5c9768748688e2/tumblr_mf3q7euz2k1s0qnhlo1_500.gif");
+        $("#cardimage").attr("src", "https://78.media.tumblr.com/2f92e5d094c732a89d5c9768748688e2/tumblr_mf3q7euz2k1s0qnhlo1_500.gif");
 
       });
 
-      
+      var moveChar = $(".moveChar");
+
         // Spiderman Theme
         var audioElementSpidey = document.createElement("audio");
         audioElementSpidey.setAttribute("src", "assets/music/Spider-Man.mp3");
@@ -91,8 +194,6 @@ $(document).ready(function() {
         });
 
         // Stop playback for all theme songs
-        
-        
         $(".pause-button").on("click", function() {
 
           
@@ -108,20 +209,21 @@ $(document).ready(function() {
 
         // Move Buttons
         $(".up-button").on("click", function() {
-          magneto.animate({ top: "-=200px" }, "normal");
+          moveChar.animate({ top: "-=200px" }, "fast");
       });
       $(".down-button").on("click", function() {
-          magneto.animate({ top: "+=200px" }, "normal");
+          moveChar.animate({ top: "+=200px" }, "fast");
       });
       $(".left-button").on("click", function() {
-          magneto.animate({ left: "-=200px" }, "normal");
+          moveChar.animate({ left: "-=200px" }, "fast");
       });
       $(".right-button").on("click", function() {
-          magneto.animate({ left: "+=200px" }, "normal");
+          moveChar.animate({ left: "+=200px" }, "fast");
       });
       $(".back-button").on("click", function() {
-          magneto.animate({ top: "110px", left: "80px" }, "fast");
-    });
+          moveChar.animate({ top: "110px", left: "10px" }, "fast");
+    }); 
+    
       $(".forcefield-button").on("click", function() {
         
         
@@ -131,6 +233,9 @@ $(document).ready(function() {
           // }, 2*t);
            $("#shield").fadeIn(2500).fadeOut(2500);
           // $('#shield').fadeToggle(2500);
+          // Magneto Theme
+        
+        });
       });
 
       // Keyboard move controls
@@ -162,25 +267,12 @@ $(document).ready(function() {
         }
       });
 
-      });
+      
 
 
 
 
-    // $("#home").on("click", function() {
-
-       
-
-    // var videoElement = document.createElement("video");
-  //  var appendVideo = videoElement.setAttribute("src", "Marvel_Opening_Theme.avi");
-    // var vid = document.getElementById("video"); 
-    // $("#video").append(appendVideo);
-
-    //          function playVid() { 
-    //             vid.play(appendVideo); 
-    //           }
-
-    // });
+    
 
     
   

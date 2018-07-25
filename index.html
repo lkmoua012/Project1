@@ -44,7 +44,7 @@
 
               <li class="nav-item ">
 
-                <a class="nav-link" href="#">Home Page
+                <a class="nav-link" href="index.html">Home Page
                   <span class="sr-only">(current)</span>
 
                 </a>
@@ -126,9 +126,15 @@
 
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 
-                  <a class="dropdown-item char" href="#">Daredevil</a>
-                  <a class="dropdown-item char" href="#">Spider-Man</a>
-                  <a class="dropdown-item char" href="#">Captain America</a>
+                  <a id="dare" class="dropdown-item char" href="#">Daredevil</a>
+                  <a id="spide" class="dropdown-item char" href="#">Spider-Man</a>
+                  <a id="capt" class="dropdown-item char" href="#">Captain America</a>
+                  <a id="mag" class="dropdown-item char" href="#">Magneto</a>
+                  <a id="ven" class="dropdown-item char" href="#">Venom</a>
+                  <a id="wolv" class="dropdown-item char" href="#">Wolverine</a>
+                  <a id="sabre" class="dropdown-item char" href="#">Sabretooth</a>
+                  <a id="hulk" class="dropdown-item char" href="#">Hulk</a>
+                  
 
                 </div>
 
@@ -154,11 +160,11 @@
         <div class="row">
 
           <!-- row with photo/text card & two video players -->
-          <div class="col-7">
+          <div class="col-4">
 
             <div id="photo_fill" class="card" style="width: 18rem;">
 
-              <img class="card-img-top portrait" src="" alt="image">
+              <img id="cardimage" class="card-img-top portrait" src="https://78.media.tumblr.com/2f92e5d094c732a89d5c9768748688e2/tumblr_mf3q7euz2k1s0qnhlo1_500.gif" alt="image">
 
               <div class="card-body">
 
@@ -178,41 +184,16 @@
 
           </div>
 
-          <div class="col"><div class="col-lg-6">
-            <!-- Wolverine Image -->
-           <img src="assets/images/Magneto.png" alt="This is a png Magneto image with transparent background" class="img magneto" style="position:absolute; top:110px; left: 80px; z-index: -20; height: 300px">
-           <img src="assets/images/forcefield.png" alt="This is a png forcefield image with transparent background" id="shield" style="display: none; position:absolute; top:110px; left: 80px; z-index: -20; height: 300px">
-         </div></div>
+         <div class="col-3">
+            <!-- Moveable Image -->
+           <img src="" alt="This is a moveable png image with transparent background" class="img moveChar" style="position: absolute; top:110px; z-index: 100; height: 300px">
+           <img src="assets/images/forcefield.png" alt="This is a png forcefield image with transparent background" id="shield" style="display: none; position: absolute; top:110px; z-index: 100; height: 300px">
+         </div>
 
-         <div id="buttons">
+         <!-- <div id="buttons">
           <button id="thisbutton" data-person="Magneto Supervillain">
             We are Homo-Superior!
-          </button>
-
-          <div class="col" style="position: absolute; width:400px; float: right; top:800px; left: 460px;"><div id="moveControls" class="card">
-              <h4 class="card-header">Move Controls</h4>
-              <div class="card-body">
-                <div class="text-center mb-1">
-                  <button class="btn btn-dark btn-lg fa fa-arrow-up up-button">Up</button>
-                </div>
-                <div class="text-center">
-                  <button class="btn btn-dark btn-lg fa fa-arrow-left left-button">Left</button>
-                  <button class="btn btn-dark btn-lg fa fa-arrow-down down-button">Down</button>
-                  <button class="btn btn-dark btn-lg fa fa-arrow-right right-button">Right</button>
-                </div>
-                <br>
-                <div class="text-center">
-                  <button class="btn btn-dark btn-lg back-button">
-                    <span class="fa fa-comment"></span> Fly back!</button>
-                </div>
-                <br>
-                <div class="text-center">
-                  <button class="btn btn-dark btn-lg forcefield-button">
-                    <span class="fa fa-comment"></span> Magnetize!</button>
-                </div>
-              </div>
-                            </div>
-          </div>
+          </button> -->
 
           <div class="col-5">
 
@@ -331,20 +312,28 @@
 
           <!-- footer (added temp inline styling to make sticky,feel free to style how you'd like) -->
           <div id="footer" class="col-12 ">
-
+            
             <footer style=" 
               width:100%;
-              padding:20px;
-              padding-bottom:4px;
-              background:rgb(95, 94, 94);
+              border: 5px ridge darkslategray;
+              padding: 5px;
+              background:darkred;
               color:white;
               font-weight:bold;
               font-size:18px;
               position:fixed;    
               bottom:0;         
               left:0; 
-              text-align:center;" id="sticky">Footer</footer>
-
+              text-align:center;" id="sticky">
+              <h4 style="display: inline; float: left; padding-left: 5px; margin-top: 8px; font-style: italic;">Move Controls</h4>
+              <button class="btn btn-dark btn-lg back-button" style="margin-right: 10px; margin-bottom: 2px;">Fly back!</button>
+              <button class="btn btn-dark btn-lg fa fa-arrow-up up-button" style="margin-right: 10px; margin-bottom: 2px;">Up</button>
+              <button class="btn btn-dark btn-lg fa fa-arrow-left left-button" style="margin-right: 10px; margin-bottom: 2px;">Left</button>
+              <button class="btn btn-dark btn-lg fa fa-arrow-down down-button" style="margin-right: 10px; margin-bottom: 2px;">Down</button>
+              <button class="btn btn-dark btn-lg fa fa-arrow-right right-button" style="margin-right: 10px; margin-bottom: 2px;">Right</button>
+              <button class="btn btn-dark btn-lg forcefield-button" style="margin-right: 10px; margin-bottom: 2px;">Magnetize!</button>     
+            </footer>
+              
           </div>
           
       </div> <!-- 2nd container end -->
