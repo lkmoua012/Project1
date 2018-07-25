@@ -1,6 +1,7 @@
 body {
     background-image: url("images/marvel1.jpeg");
     background-size: 100% 100%;
+    cursor: url("spidey_Mjd_icon.ico"), default;
     
 }
 
@@ -21,19 +22,19 @@ body {
 a:link {
 
     color: blue;
-    cursor: url("images/spidey_Mjd_icon.ico"), default;
+    
     
     }
     
     a:visited {
     
     color: green;
-    cursor: url("images/spidey_Mjd_icon.ico"), default;
+    
     
     }
     
     a:hover {
     
     color: yellow;
-    cursor: url("images/spidey_Mjd_icon.ico"), default;
+    cursor: url("assets/images/spidey_Mjd_icon.ico"), default;
     }
