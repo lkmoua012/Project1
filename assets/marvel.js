@@ -165,7 +165,7 @@ $(document).ready(function() {
 
 
 
-  });
+  
 
     $("#photoButton").on("click", function() {
 
@@ -266,7 +266,7 @@ $(document).ready(function() {
           // Magneto Theme
         
         });
-     });
+     
 
       // Keyboard move controls
       $(document).keyup(function(e) {
