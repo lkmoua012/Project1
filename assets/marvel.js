@@ -31,6 +31,7 @@ window.onload = function() {
         .height( $(document).height() )
         .width( $(document).width() );
 
+
     };
 // END OF VERIFICATION MODAL
 
@@ -60,6 +61,7 @@ function marvelAPI() {
   };
 
 $(document).ready(function() {
+
 
   $("footer").hide();
 
