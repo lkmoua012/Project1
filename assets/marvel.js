@@ -10,12 +10,31 @@ window.onload = function () {
       
       return false;
     }
+    age_form.submit(function(e){
+        
+        e.preventDefault();
+        
+        var $this = $(this),
+            month = parseInt($this.find('select[name=month]').val(), 10),
+            day = parseInt($this.find('select[name=day]').val(), 10),
+            year = parseInt($this.find('select[name=year]').val(), 10),
+            birthday = new Date(year, month, day);
+            console.log(birthday);
+        if ( meetsMinimumAge(birthday, 18) ) {
+            modal.remove();
+            localStorage.setItem('isOldEnough', 'yes');
+        } else {
+            modal.find('.denied').fadeIn('fast');
+        }
+    });
+    $('#verify')
+    .height( $(document).height() )
+    .width( $(document).width() );
 
-  }
-
-
-  
 };
+
+
+// END OF VERIFICATION MODAL
 
 var activeName = "";
 var idName = "";
@@ -239,65 +258,7 @@ $(document).ready(function () {
 
   });
 
-  // Move Buttons
-  $(".up-button").on("click", function () {
-    moveChar.animate({ top: "-=200px" }, "fast");
-  });
-  $(".down-button").on("click", function () {
-    moveChar.animate({ top: "+=200px" }, "fast");
-  });
-  $(".left-button").on("click", function () {
-    moveChar.animate({ left: "-=200px" }, "fast");
-  });
-  $(".right-button").on("click", function () {
-    moveChar.animate({ left: "+=200px" }, "fast");
-  });
-  $(".back-button").on("click", function () {
-    moveChar.animate({ top: "110px", left: "10px" }, "fast");
-  });
-
-  $(".forcefield-button").on("click", function () {
-
-
-    // var t = 1500;
-    // setInterval( function(){
-    // $('#shield').fadeIn( t, function(){ $(this).fadeOut( t ); } );
-    // }, 2*t);
-    $("#shield").fadeIn(2500).fadeOut(2500);
-    // $('#shield').fadeToggle(2500);
-    // Magneto Theme
-
-  });
-
-
-  // Keyboard move controls
-  $(document).keyup(function (e) {
-    switch (e.which) {
-
-      // Move Buttons (Keyboard Down)
-      case 40:
-        magneto.animate({ top: "+=200px" }, "normal");
-        break;
-
-      // Move Buttons (Keyboard Right)
-      case 39:
-        magneto.animate({ left: "+=200px" }, "normal");
-        break;
-
-      // Move Buttons (Keyboard Up)
-      case 38:
-        magneto.animate({ top: "-=200px" }, "normal");
-        break;
-
-      // Move Buttons (Keyboard Left)
-      case 37:
-        magneto.animate({ left: "-=200px" }, "normal");
-        break;
-
-      default:
-        break;
-    }
-  });
+  
 
 });
 
