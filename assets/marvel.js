@@ -37,28 +37,6 @@ window.onload = function() {
 var activeName = "";
 var idName = "";
 
-function marvelAPI() {
-  
-    var queryURL = "https://gateway.marvel.com:443/v1/public/characters?name="+ activeName + "&ts=1&apikey=3729b58ef60ba8affe97db66144af1c2&hash=8a8767c9ba9a5c15ae56cd72bc2718e9";
-     
-    $.ajax({
-        url: queryURL,
-        method: "GET"
-      }).then(function(response) {
-  
-        var portrait = (response.data.results[0].thumbnail.path + "." + response.data.results[0].thumbnail.extension);
-  
-        $(".portrait").attr("src", portrait);
-        $(".charName").text(response.data.results[0].name);
-       $(".description").text(response.data.results[0].description);
-  
-      //  console.log(response);
-      //  console.log(portrait);
-  
-      });
-     //^ End of AJAX
-  };
-
 $(document).ready(function() {
 
   $("footer").hide();
@@ -70,7 +48,6 @@ $(document).ready(function() {
     activeName = $(this).text();
     idName = $(this).attr("id");
     marvelAPI();
-    marvelYoutube();
     });
 
       //Moveable Characters
@@ -179,16 +156,6 @@ $(document).ready(function() {
         
        });
 
-
-
-  
-
-    $("#photoButton").on("click", function() {
-
-        $("#cardimage").attr("src", "https://78.media.tumblr.com/2f92e5d094c732a89d5c9768748688e2/tumblr_mf3q7euz2k1s0qnhlo1_500.gif");
-
-      });
-
       var moveChar = $(".moveChar");
 
         // Spiderman Theme
@@ -282,42 +249,15 @@ $(document).ready(function() {
           // Magneto Theme
         
         });
-     
 
-      // Keyboard move controls
-      $(document).keyup(function(e) {
-        switch (e.which) {
+      $("#photoButton").on("click", function() {
 
-        // Move Buttons (Keyboard Down)
-        case 40:
-        magneto.animate({ top: "+=200px" }, "normal");
-          break;
-
-          // Move Buttons (Keyboard Right)
-        case 39:
-        magneto.animate({ left: "+=200px" }, "normal");
-          break;
-
-          // Move Buttons (Keyboard Up)
-        case 38:
-        magneto.animate({ top: "-=200px" }, "normal");
-          break;
-
-          // Move Buttons (Keyboard Left)
-        case 37:
-        magneto.animate({ left: "-=200px" }, "normal");
-          break;
-
-        default:
-          break;
-        }
+        giphyAPI();
+    
       });
 
-<<<<<<< HEAD
-=======
     });
 
->>>>>>> f6e23aa9f8dc138ce5c037d74caa70f5ad569ab7
 function marvelAPI() {
 
   var queryURL = "https://gateway.marvel.com:443/v1/public/characters?name="+ activeName + "&ts=1&apikey=3729b58ef60ba8affe97db66144af1c2&hash=8a8767c9ba9a5c15ae56cd72bc2718e9";
@@ -341,29 +281,21 @@ function marvelAPI() {
     //^ End of AJAX
 };
 
-function marvelYoutube() {
+function giphyAPI() {
+    
+    var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=LoBZFiPXwM7NZowjkwleAImc7tMGfyUh&q=" + activeName + "&rating=PG-13&limit=1";
 
-  var youtubeSrc = "https://www.youtube.com/embed/";
+    $.ajax({
 
-  if (idName === "spiderman"){
+      url: queryURL,
+      method: "GET"
 
-    //set youtube id src to spider man video
-    //set youtube id src to spider man video
+    }).then(function(response) {
 
-  };
+        var results = response.data;
 
-  if (idName === "daredevil"){
+        $("#cardimage").attr("src", results[0].images.fixed_height.url);
 
-    $("#youtubePlayer1").attr("src", (youtubeSrc + "B66feInucFY"));
-    $("#youtubePlayer2").attr("src", (youtubeSrc + "KFYFh8w4758"));
-
-  };
-
-  if (idName === "captainamerica"){
-
-    $("#youtubePlayer1").attr("src", (youtubeSrc + "HFjMy3dqmgU"));
-    $("#youtubePlayer2").attr("src", (youtubeSrc + "BHyO8ztfE8k"));
-
-  };
+    });
 
 };
