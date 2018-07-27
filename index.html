@@ -21,26 +21,25 @@
   <!-- AGE VERIFICATION MODAL -->
   <div id="verify">
     
-
     <div class="age">
         <form>
 
-            <h2>Caution, this site is EXTREMELY COOL - Please Verify Your Age</h2>
+          <h2>Caution, this site is EXTREMELY COOL - Please Verify Your Age</h2>
             
-            <select name="month" class="browser-default" id="month">
-                <option value="0">January</option>
-                <option value="1">February</option>
-                <option value="2">March</option>
-                <option value="3">April</option>
-                <option value="4">May</option>
-                <option value="5">June</option>
-                <option value="6">July</option>
-                <option value="7">August</option>
-                <option value="8">September</option>
-                <option value="9">October</option>
-                <option value="10">November</option>
-                <option value="11">December</option>
-            </select>
+          <select name="month" class="browser-default" id="month">
+              <option value="0">January</option>
+              <option value="1">February</option>
+              <option value="2">March</option>
+              <option value="3">April</option>
+              <option value="4">May</option>
+              <option value="5">June</option>
+              <option value="6">July</option>
+              <option value="7">August</option>
+              <option value="8">September</option>
+              <option value="9">October</option>
+              <option value="10">November</option>
+              <option value="11">December</option>
+          </select>
 
             <select name="day" class="browser-default" id="day">
                 {% for day in (1..31) %}
@@ -207,34 +206,13 @@
   <!-- END OF AGE VERIFICATION MODAL -->
 
   <!-- Materialize Nav Bar (outside of container for full width) -->
-      <nav>
-        <div class="nav-wrapper red z-depth-5">
-          <a href="#!" class="brand-logo">
-            Marvel</a>
-          <ul class="right hide-on-med-and-down">
-            <li>
-              <a href="sass.html">
-                <i class="material-icons">search</i>
-              </a>
-            </li>
-            <li>
-              <a href="badges.html">
-                <i class="material-icons">view_module</i>
-              </a>
-            </li>
-            <li>
-              <a href="collapsible.html">
-                <i class="material-icons">refresh</i>
-              </a>
-            </li>
-            <li>
-              <a href="mobile.html">
-                <i class="material-icons">more_vert</i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+  <nav>
+    <div class="nav-wrapper red z-depth-5">
+        <a id="refresh" href="index.html"><i class="material-icons">refresh</i></a>  
+      <h2 id="brand-logo">Marvel</h2>
+        <h6 class="data_reference">Data provided by Marvel. © 2018 Marvel</h6>
+    </div>
+  </nav>
       <br>
 
   <!-- first container, a second container below -->
@@ -334,15 +312,6 @@
 
         <br>
 
-        <div class="row">
-          <div class="col-12">
-            <!--full width amazon results link -->
-            <nav class="navbar navbar-light bg-light">
-              <a class="navbar-brand" href="#">Amazon Results</a>
-            </nav>
-          </div>
-        </div>
-
         <br>
 
         <div id="button_row" class="row">
@@ -414,6 +383,7 @@
           </div>
         </div>
 
+        <br>
         <br>
         <br>
         <br>
