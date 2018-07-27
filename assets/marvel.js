@@ -63,16 +63,6 @@ function marvelAPI() {
 
 $(document).ready(function() {
 
-  function validateTextbox() {
-
-    var box = document.getElementById("name");
-     if (box.value == "") {
-    
-    return false;
-     }
-    
-    }
-
   $("footer").hide();
 
   $(".moveChar").hide();
