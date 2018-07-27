@@ -28,10 +28,12 @@ window.onload = function() {
         }
     });
     $('#verify')
-        .height( $(document).height() )
-        .width( $(document).width() );
+    .height( $(document).height() )
+    .width( $(document).width() );
 
-    };
+};
+
+
 // END OF VERIFICATION MODAL
 
 var activeName = "";
