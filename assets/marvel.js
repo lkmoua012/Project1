@@ -39,32 +39,7 @@ window.onload = function () {
 var activeName = "";
 var idName = "";
 
-function marvelAPI() {
-
-  var queryURL = "https://gateway.marvel.com:443/v1/public/characters?name=" + activeName + "&ts=1&apikey=3729b58ef60ba8affe97db66144af1c2&hash=8a8767c9ba9a5c15ae56cd72bc2718e9";
-
-  $.ajax({
-    url: queryURL,
-    method: "GET"
-  }).then(function (response) {
-
-    var portrait = (response.data.results[0].thumbnail.path + "." + response.data.results[0].thumbnail.extension);
-
-    $(".portrait").attr("src", portrait);
-    $(".charName").text(response.data.results[0].name);
-    $(".description").text(response.data.results[0].description);
-
-    //  console.log(response);
-    //  console.log(portrait);
-
-  });
-  //^ End of AJAX
-};
-
-$(document).ready(function () {
-
-  
-
+$(document).ready(function() {
 
   $("footer").hide();
 
@@ -75,51 +50,11 @@ $(document).ready(function () {
     activeName = $(this).text();
     idName = $(this).attr("id");
     marvelAPI();
-    marvelYoutube();
-  });
-
-  //Moveable Characters
-
-  $("#mag").click(function () {
-
-    let wallMag = "assets/images/magnetowallpaper.jpg";
-    $('body').css('background-image', 'url(' + wallMag + ')');
-    $("#youtubeOne").attr("src", "https://www.youtube.com/embed/Yf0aQQgLBZk");
-    $("#youtubeTwo").attr("src", "https://www.youtube.com/embed/2VmqIwB11yE");
-    $(".moveChar").show();
-    $(".moveChar").attr("src", "assets/images/Magneto.png");
-    $("footer").show();
-    $(".forcefield-button").show();
+    });
 
   });
 
-  $("#dare").click(function () {
-
-    let wallSpide = "assets/images/daredevilwallpaper.jpg";
-    $('body').css('background-image', 'url(' + wallSpide + ')');
-    $("#youtubeOne").attr("src", "https://www.youtube.com/embed/au3EtZEla5Y");
-    $("#youtubeTwo").attr("src", "https://www.youtube.com/embed/anDPNTqRgdg");
-    $(".moveChar").show();
-    $(".moveChar").attr("src", "assets/images/daredevil.png");
-    $("footer").show();
-    $(".forcefield-button").hide();
-
-  });
-
-  $("#spide").click(function () {
-
-    let wallDev = "assets/images/spideywallpaper.jpg";
-    $('body').css('background-image', 'url(' + wallDev + ')');
-    $("#youtubeOne").attr("src", "https://www.youtube.com/embed/HStPxrLfM9k");
-    $("#youtubeTwo").attr("src", "https://www.youtube.com/embed/PmaJqv_3Q_s");
-    $(".moveChar").show();
-    $(".moveChar").attr("src", "assets/images/Spidey.png");
-    $("footer").show();
-    $(".forcefield-button").hide();
-
-  });
-
-  $("#ven").click(function () {
+      var moveChar = $(".moveChar");
 
     let wallVen = "assets/images/venomwallpaper.jpg";
     $('body').css('background-image', 'url(' + wallVen + ')');
@@ -130,7 +65,99 @@ $(document).ready(function () {
     $("footer").show();
     $(".forcefield-button").hide();
 
-  });
+        $("#themeSpidey").on("click", function() {
+          audioElementSpidey.play();
+        });
+        
+        // Wolverine Theme
+        var audioElementWolf = document.createElement("audio");
+        audioElementWolf.setAttribute("src", "assets/music/TheWolverine.mp3");
+
+        $("#themeWolverine").on("click", function() {
+          audioElementWolf.play();
+        });
+
+        // Hulk Theme
+        var audioElementHulk = document.createElement("audio");
+        audioElementHulk.setAttribute("src", "assets/music/Incredible_Hulk.mp3");
+
+        $("#themeHulk").on("click", function() {
+          audioElementHulk.play();
+        });
+
+        // Magneto Theme
+        var audioElementMag = document.createElement("audio");
+        audioElementMag.setAttribute("src", "assets/music/MagnetoSuperTheme.mp3");
+
+        $("#themeMagneto").on("click", function() {
+          audioElementMag.play();
+        });
+
+        // Venom Theme
+        var audioElementVen = document.createElement("audio");
+        audioElementVen.setAttribute("src", "assets/music/Venomtheme.mp3");
+
+        $("#themeVenom").on("click", function() {
+          audioElementVen.play();
+        });
+
+        // Sabretooth Theme
+        var audioElementSab = document.createElement("audio");
+        audioElementSab.setAttribute("src", "assets/music/Sabretooth_lab_fight.mp3");
+
+        $("#themeSabre").on("click", function() {
+          audioElementSab.play();
+        });
+
+        // Stop playback for all theme songs
+        $(".pause-button").on("click", function() {
+
+          
+          audioElementSpidey.pause();
+          audioElementWolf.pause();
+          audioElementHulk.pause();
+          audioElementMag.pause();
+          audioElementVen.pause();
+          audioElementSab.pause();
+
+          
+        });
+
+        // Move Buttons
+        $(".up-button").on("click", function() {
+          moveChar.animate({ top: "-=200px" }, "fast");
+      });
+      $(".down-button").on("click", function() {
+          moveChar.animate({ top: "+=200px" }, "fast");
+      });
+      $(".left-button").on("click", function() {
+          moveChar.animate({ left: "-=200px" }, "fast");
+      });
+      $(".right-button").on("click", function() {
+          moveChar.animate({ left: "+=200px" }, "fast");
+      });
+      $(".back-button").on("click", function() {
+          moveChar.animate({ top: "110px", left: "10px" }, "fast");
+    }); 
+    
+      $(".forcefield-button").on("click", function() {
+        
+        
+        // var t = 1500;
+        // setInterval( function(){
+        // $('#shield').fadeIn( t, function(){ $(this).fadeOut( t ); } );
+          // }, 2*t);
+           $("#shield").fadeIn(2500).fadeOut(2500);
+          // $('#shield').fadeToggle(2500);
+          // Magneto Theme
+        
+        });
+
+      $("#photoButton").on("click", function() {
+
+        giphyAPI();
+    
+      });
 
   $("#sabre").click(function () {
 
@@ -285,29 +312,21 @@ function marvelAPI() {
   //^ End of AJAX
 };
 
-function marvelYoutube() {
+function giphyAPI() {
+    
+    var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=LoBZFiPXwM7NZowjkwleAImc7tMGfyUh&q=" + activeName + "&rating=PG-13&limit=1";
 
-  var youtubeSrc = "https://www.youtube.com/embed/";
+    $.ajax({
 
-  if (idName === "spiderman") {
+      url: queryURL,
+      method: "GET"
 
-    //set youtube id src to spider man video
-    //set youtube id src to spider man video
+    }).then(function(response) {
 
-  };
+        var results = response.data;
 
-  if (idName === "daredevil") {
+        $("#cardimage").attr("src", results[0].images.fixed_height.url);
 
-    $("#youtubePlayer1").attr("src", (youtubeSrc + "B66feInucFY"));
-    $("#youtubePlayer2").attr("src", (youtubeSrc + "KFYFh8w4758"));
-
-  };
-
-  if (idName === "captainamerica") {
-
-    $("#youtubePlayer1").attr("src", (youtubeSrc + "HFjMy3dqmgU"));
-    $("#youtubePlayer2").attr("src", (youtubeSrc + "BHyO8ztfE8k"));
-
-  };
+    });
 
 };
