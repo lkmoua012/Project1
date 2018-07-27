@@ -25,8 +25,18 @@ body {
     color: rgb(122, 120, 120);
 }
 
-a.brand-logo {
+#brand-logo {
+    margin:0;
+    margin-left: 2%;
+    padding-top: .5%;
+  
+}
+
+.data_reference {
+    font-size: 50%;
     padding-left:2%;
+    
+  
 }
 
 #verify {
@@ -57,20 +67,32 @@ a.brand-logo {
     color: #ffa000;
 }
 
-
-#brand-logo {
-    margin:0;
-    margin-left: 2%;
-    padding-top: .5%;
-  
-}
-.data_reference {
-    font-size: 50%;
-    padding-left:2%;
-    
-  
-}
 #refresh {
     float:right;
     padding-right:3%;
+}
+
+/* music button spacing */
+
+#hulk {
+    padding-right: 60%;
+    margin-left: -5%;
+}
+#venom {
+    margin-right: 20%; 
+}
+
+#venoms {
+    padding-right: 0;
+    margin-left: -2.2%;
+}
+
+#themevenom {
+    padding-right:1%;
+}
+#themesabre {
+    padding-right:3%;
+}
+#sabretooth {
+    margin-left: -22%;
 }

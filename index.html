@@ -24,23 +24,22 @@
     <div class="age">
         <form>
 
-          <h2>Caution, this site is EXTREMELY COOL - Please Verify Your Age</h2>
-            
-          <select name="month" class="browser-default" id="month">
-              <option value="0">January</option>
-              <option value="1">February</option>
-              <option value="2">March</option>
-              <option value="3">April</option>
-              <option value="4">May</option>
-              <option value="5">June</option>
-              <option value="6">July</option>
-              <option value="7">August</option>
-              <option value="8">September</option>
-              <option value="9">October</option>
-              <option value="10">November</option>
-              <option value="11">December</option>
-          </select>
+            <h2>Caution, this site is EXTREMELY COOL - Please Verify Your Age</h2>
+            <select name="month" class="browser-default" id="month">
 
+                <option value="0">January</option>
+                <option value="1">February</option>
+                <option value="2">March</option>
+                <option value="3">April</option>
+                <option value="4">May</option>
+                <option value="5">June</option>
+                <option value="6">July</option>
+                <option value="7">August</option>
+                <option value="8">September</option>
+                <option value="9">October</option>
+                <option value="10">November</option>
+                <option value="11">December</option>
+            </select>
             <select name="day" class="browser-default" id="day">
                 {% for day in (1..31) %}
                     <!-- <option value="{{ day }}">{{ day }}</option> -->
@@ -79,8 +78,7 @@
             </select>
 
                 <!-- {% assign this_year = 'now' | date: "%Y" %} -->
-
-            <select name="year" class="browser-default" id="year">
+             <select name="year" class="browser-default" id="year">
                 {% for year in (1900..this_year) %}
                     <!-- <option value="{{ year }}">{{ year }}</option> -->
                     <option value="2018">2018</option>
@@ -186,33 +184,25 @@
                     <option value="1918">1918</option>
                 <!-- {% endfor %} -->
             </select>        
-
             <br> &nbsp; <br>
-
-            <input type="submit" value="Submit">
+             <input type="submit" value="Submit">
 
         </form>
 
         <div class="denied">
             Sorry, but you do not meet the minimum age requirement to view this website. 
         </div>
-    
+     </div>
     </div>
-
-</div>
-
-  
-  
-  <!-- END OF AGE VERIFICATION MODAL -->
-
-  <!-- Materialize Nav Bar (outside of container for full width) -->
-  <nav>
-    <div class="nav-wrapper red z-depth-5">
-        <a id="refresh" href="index.html"><i class="material-icons">refresh</i></a>  
-      <h2 id="brand-logo">Marvel</h2>
-        <h6 class="data_reference">Data provided by Marvel. © 2018 Marvel</h6>
-    </div>
-  </nav>
+    <!-- END OF AGE VERIFICATION MODAL -->
+    <!-- Materialize Nav Bar (outside of container for full width) -->
+      <nav>
+        <div class="nav-wrapper red z-depth-5">
+            <a id="refresh" href="index.html"><i class="material-icons">refresh</i></a>  
+            <h2 id="brand-logo">Marvel</h2>
+            <h6 class="data_reference">Data provided by Marvel. © 2014 Marvel</h6>
+        </div>
+      </nav>
       <br>
 
   <!-- first container, a second container below -->
@@ -287,10 +277,6 @@
             <img src="" alt="This is a moveable png image with transparent background" class="img moveChar" style="position: absolute; top:110px; z-index: 100; height: 300px">
             <img src="assets/images/forcefield.png" alt="This is a png forcefield image with transparent background" id="shield" style="display: none; position: absolute; top:110px; z-index: 100; height: 300px">
           </div>
-          <!-- <div id="buttons">
-          <button id="thisbutton" data-person="Magneto Supervillain">
-            We are Homo-Superior!
-          </button> -->
           <div class="col-5">
 
             <!-- 16:9 aspect ratio video player to append through js -->
@@ -312,8 +298,17 @@
 
         <br>
 
-        <br>
+        <div class="row">
+          <div class="col-12">
+            <!--full width amazon results link -->
+            <!-- <nav class="navbar navbar-light bg-light">
+              <a class="navbar-brand" href="#">Amazon Results</a>
+            </nav> -->
+          </div>
+        </div>
 
+        <br>
+<!-- gave individual id names to inner button div's (Venom has an extra for col div "venoms") -->
         <div id="button_row" class="row">
           <div class="col-2">
             <div class="col">
@@ -326,7 +321,7 @@
 
           <div class="col-2">
             <div class="col">
-              <div id="musicControls" class="text-center">
+              <div id="musicControls1" class="text-center">
                 <button id="themeWolverine" class="btn btn-warning btn-xs theme-button">
                   <span class="fa fa-music"></span> Wolverine Theme!</button>
               </div>
@@ -335,8 +330,8 @@
           </div>
 
           <div class="col-2">
-            <div class="col">
-              <div id="musicControls" class="text-center">
+            <div id="hulk" class="col">
+              <div id="musicControls2" class="text-center">
                 <button id="themeHulk" class="btn btn-warning btn-xs theme-button">
                   <span class="fa fa-music"></span> Hulk Theme!</button>
               </div>
@@ -345,8 +340,8 @@
           </div>
 
           <div class="col-2">
-            <div class="col">
-              <div id="musicControls" class="text-center">
+            <div id="magneto" class="col">
+              <div id="musicControls3" class="text-center">
                 <button id="themeMagneto" class="btn btn-warning btn-xs theme-button">
                   <span class="fa fa-music"></span> Magneto Theme!</button>
               </div>
@@ -354,9 +349,9 @@
 
           </div>
 
-          <div class="col-2">
-            <div class="col">
-              <div id="musicControls" class="text-center">
+          <div id="venoms" class="col-2">
+            <div id="venom" class="col">
+              <div id="musicControls4" class="text-center">
                 <button id="themeVenom" class="btn btn-warning btn-xs theme-button">
                   <span class="fa fa-music"></span> Venom Theme!</button>
               </div>
@@ -365,8 +360,8 @@
           </div>
 
           <div class="col-2">
-            <div class="col">
-              <div id="musicControls" class="text-center">
+            <div id="sabretooth" class="col">
+              <div id="musicControls5" class="text-center">
                 <button id="themeSabre" class="btn btn-warning btn-xs theme-button">
                   <span class="fa fa-music"></span> Sabretooth Theme!</button>
               </div>
@@ -375,7 +370,7 @@
           </div>
           <div class="col-2" style="display: block; margin-top: 10px; margin-left: auto; margin-right: auto;">
             <div class="col">
-              <div id="musicControls" class="text-center">
+              <div id="musicControls6" class="text-center">
                 <button class="btn btn-dark btn-xs pause-button">
                   <span class="fa fa-pause"></span> End Songs</button>
               </div>
