@@ -1,37 +1,37 @@
 // VERIFICATION MODAL
 window.onload = function() {
 
-    var age_form = $('#verify .age form'),
-          modal = $('#verify');
-      if ( localStorage.getItem('isOldEnough') === 'yes' ) {
-          modal.remove();
-      }
-      function meetsMinimumAge(birthDate, minAge) {
-          var tempDate = new Date(birthDate.getFullYear() + minAge, birthDate.getMonth(), birthDate.getDate());
-          return (tempDate <= new Date());
-      }
-      age_form.submit(function(e){
-          
-          e.preventDefault();
-          
-          var $this = $(this),
-              month = parseInt($this.find('select[name=month]').val(), 10),
-              day = parseInt($this.find('select[name=day]').val(), 10),
-              year = parseInt($this.find('select[name=year]').val(), 10),
-              birthday = new Date(year, month, day);
-              console.log(birthday);
-          if ( meetsMinimumAge(birthday, 18) ) {
-              modal.remove();
-              localStorage.setItem('isOldEnough', 'yes');
-          } else {
-              modal.find('.denied').fadeIn('fast');
-          }
-      });
-      $('#verify')
-          .height( $(document).height() )
-          .width( $(document).width() );
-  
-      };
+  var age_form = $('#verify .age form'),
+        modal = $('#verify');
+    if ( localStorage.getItem('isOldEnough') === 'yes' ) {
+        modal.remove();
+    }
+    function meetsMinimumAge(birthDate, minAge) {
+        var tempDate = new Date(birthDate.getFullYear() + minAge, birthDate.getMonth(), birthDate.getDate());
+        return (tempDate <= new Date());
+    }
+    age_form.submit(function(e){
+        
+        e.preventDefault();
+        
+        var $this = $(this),
+            month = parseInt($this.find('select[name=month]').val(), 10),
+            day = parseInt($this.find('select[name=day]').val(), 10),
+            year = parseInt($this.find('select[name=year]').val(), 10),
+            birthday = new Date(year, month, day);
+            console.log(birthday);
+        if ( meetsMinimumAge(birthday, 18) ) {
+            modal.remove();
+            localStorage.setItem('isOldEnough', 'yes');
+        } else {
+            modal.find('.denied').fadeIn('fast');
+        }
+    });
+    $('#verify')
+        .height( $(document).height() )
+        .width( $(document).width() );
+
+    };
 // END OF VERIFICATION MODAL
 
 var activeName = "";
@@ -79,6 +79,8 @@ $(document).ready(function() {
      
         let wallMag = "assets/images/magnetowallpaper.jpg";
         $('body').css('background-image', 'url(' + wallMag + ')');
+        $("#youtubeOne").attr("src", "https://www.youtube.com/embed/Yf0aQQgLBZk");
+        $("#youtubeTwo").attr("src", "https://www.youtube.com/embed/2VmqIwB11yE");
         $(".moveChar").show();
         $(".moveChar").attr("src", "assets/images/Magneto.png");
         $("footer").show();
@@ -90,6 +92,8 @@ $(document).ready(function() {
      
         let wallSpide = "assets/images/daredevilwallpaper.jpg";
         $('body').css('background-image', 'url(' + wallSpide + ')');
+        $("#youtubeOne").attr("src", "https://www.youtube.com/embed/au3EtZEla5Y");
+        $("#youtubeTwo").attr("src", "https://www.youtube.com/embed/anDPNTqRgdg");
         $(".moveChar").show();
         $(".moveChar").attr("src", "assets/images/daredevil.png");
         $("footer").show();
@@ -101,6 +105,8 @@ $(document).ready(function() {
      
         let wallDev = "assets/images/spideywallpaper.jpg";
         $('body').css('background-image', 'url(' + wallDev + ')');
+        $("#youtubeOne").attr("src", "https://www.youtube.com/embed/HStPxrLfM9k");
+        $("#youtubeTwo").attr("src", "https://www.youtube.com/embed/PmaJqv_3Q_s");
         $(".moveChar").show();
         $(".moveChar").attr("src", "assets/images/Spidey.png");
         $("footer").show();
@@ -112,6 +118,8 @@ $(document).ready(function() {
      
         let wallVen = "assets/images/venomwallpaper.jpg";
         $('body').css('background-image', 'url(' + wallVen + ')');
+        $("#youtubeOne").attr("src", "https://www.youtube.com/embed/UfChVGHZhDQ");
+        $("#youtubeTwo").attr("src", "https://www.youtube.com/embed/ekbJYsEBbn0");
         $(".moveChar").show();
         $(".moveChar").attr("src", "assets/images/venom.png");
         $("footer").show();
@@ -123,6 +131,8 @@ $(document).ready(function() {
      
         let wallSabre = "assets/images/sabretoothwallpaper.jpg";
         $('body').css('background-image', 'url(' + wallSabre + ')');
+        $("#youtubeOne").attr("src", "https://www.youtube.com/embed/o5fO2zx1FzE");
+        $("#youtubeTwo").attr("src", "https://www.youtube.com/embed/WJWewI-4Pms");
         $(".moveChar").show();
         $(".moveChar").attr("src", "assets/images/Sabretooth.png");
         $("footer").show();
@@ -134,6 +144,8 @@ $(document).ready(function() {
      
         let wallWolv = "assets/images/wolverinewallpaper.jpg";
         $('body').css('background-image', 'url(' + wallWolv + ')');
+        $("#youtubeOne").attr("src", "https://www.youtube.com/embed/eFu5Bs5r6SQ");
+        $("#youtubeTwo").attr("src", "https://www.youtube.com/embed/yQJmWG5owg0");
         $(".moveChar").show();
         $(".moveChar").attr("src", "assets/images/wolv.png");
         $("footer").show();
@@ -145,6 +157,8 @@ $(document).ready(function() {
      
         let wallCapt = "assets/images/captainwallpaper.jpg";
         $('body').css('background-image', 'url(' + wallCapt + ')');
+        $("#youtubeOne").attr("src", "https://www.youtube.com/embed/cg1rtWXHSKU");
+        $("#youtubeTwo").attr("src", "https://www.youtube.com/embed/mj5-9pXGhU4");
         $(".moveChar").show();
         $(".moveChar").attr("src", "assets/images/captain.png");
         $("footer").show();
@@ -156,6 +170,8 @@ $(document).ready(function() {
      
         let wallHulk = "assets/images/hulkwallpaper.jpg";
         $('body').css('background-image', 'url(' + wallHulk + ')');
+        $("#youtubeOne").attr("src", "https://www.youtube.com/embed/SLD9xzJ4oeU");
+        $("#youtubeTwo").attr("src", "https://www.youtube.com/embed/3igB_pZAMhU");
         $(".moveChar").show();
         $(".moveChar").attr("src", "assets/images/hulktr.jpg");
         $("footer").show();
@@ -165,7 +181,7 @@ $(document).ready(function() {
 
 
 
-
+  
 
     $("#photoButton").on("click", function() {
 
@@ -266,7 +282,7 @@ $(document).ready(function() {
           // Magneto Theme
         
         });
-      });
+     
 
       // Keyboard move controls
       $(document).keyup(function(e) {
@@ -297,6 +313,11 @@ $(document).ready(function() {
         }
       });
 
+<<<<<<< HEAD
+=======
+    });
+
+>>>>>>> f6e23aa9f8dc138ce5c037d74caa70f5ad569ab7
 function marvelAPI() {
 
   var queryURL = "https://gateway.marvel.com:443/v1/public/characters?name="+ activeName + "&ts=1&apikey=3729b58ef60ba8affe97db66144af1c2&hash=8a8767c9ba9a5c15ae56cd72bc2718e9";

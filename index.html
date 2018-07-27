@@ -8,489 +8,408 @@
 
   <title>Marvel</title>
 
-
-  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" crossorigin="anonymous">
-
+  <link rel="stylesheet" type="text/css" href="assets/materialize.css">
   <link rel="stylesheet" type="text/css" href="assets/marvel.css">
 
-  
+
 </head>
 
 <body>
 
-<!-- AGE VERIFICATION MODAL -->
-    <div id="verify">
+  <!-- AGE VERIFICATION MODAL -->
+  <div id="verify">
     
 
-        <div class="age">
-            <form>
-    
-                <h2>Caution, this site is EXTREMELY COOL - Please Verify Your Age</h2>
-                
-                <select name="month" id="month">
-                    <option value="0">January</a>
-                    <option value="1">February</a>
-                    <option value="2">March</a>
-                    <option value="3">April</a>
-                    <option value="4">May</a>
-                    <option value="5">June</a>
-                    <option value="6">July</a>
-                    <option value="7">August</a>
-                    <option value="8">September</a>
-                    <option value="9">October</a>
-                    <option value="10">November</a>
-                    <option value="11">December</a>
-                </select>
-    
-                <select name="day" id="day">
-                    {% for day in (1..31) %}
-                        <!-- <option value="{{ day }}">{{ day }}</option> -->
-                        <option value="0">1</a>
-                        <option value="1">2</a>
-                        <option value="2">3</a>
-                        <option value="3">4</a>
-                        <option value="4">5</a>
-                        <option value="5">6</a>
-                        <option value="6">7</a>
-                        <option value="7">8</a>
-                        <option value="8">9</a>
-                        <option value="9">10</a>
-                        <option value="10">11</a>
-                        <option value="11">12</a>
-                        <option value="12">13</a>
-                        <option value="13">14</a>
-                        <option value="14">15</a>
-                        <option value="15">16</a>
-                        <option value="16">17</a>
-                        <option value="17">18</a>
-                        <option value="18">19</a>
-                        <option value="19">20</a>
-                        <option value="20">21</a>
-                        <option value="21">22</a>
-                        <option value="22">23</a>
-                        <option value="23">24</a>
-                        <option value="24">25</a>
-                        <option value="25">26</a>
-                        <option value="26">27</a>
-                        <option value="27">28</a>
-                        <option value="28">29</a>
-                        <option value="29">30</a>
-                        <option value="30">31</a>
-                    <!-- {% endfor %} -->
-                </select>
-    
-                    <!-- {% assign this_year = 'now' | date: "%Y" %} -->
-    
-                <select name="year" id="year">
-                    {% for year in (1900..this_year) %}
-                        <!-- <option value="{{ year }}">{{ year }}</option> -->
-                        <option value="2018">2018</a>
-                        <option value="2017">2017</a>
-                        <option value="2016">2016</a>
-                        <option value="2015">2015</a>
-                        <option value="2014">2014</a>
-                        <option value="2013">2013</a>
-                        <option value="2012">2012</a>
-                        <option value="2011">2011</a>
-                        <option value="2010">2010</a>
-                        <option value="2009">2009</a>
-                        <option value="2008">2008</a>
-                        <option value="2007">2007</a>
-                        <option value="2006">2006</a>
-                        <option value="2005">2005</a>
-                        <option value="2004">2004</a>
-                        <option value="2003">2003</a>
-                        <option value="2002">2002</a>
-                        <option value="2001">2001</a>
-                        <option value="2000">2000</a>
-                        <option value="1999">1999</a>
-                        <option value="1998">1998</a>
-                        <option value="1997">1997</a>
-                        <option value="1996">1996</a>
-                        <option value="1995">1995</a>
-                        <option value="1994">1994</a>
-                        <option value="1993">1993</a>
-                        <option value="1992">1992</a>
-                        <option value="1991">1991</a>
-                        <option value="1990">1990</a>
-                        <option value="1989">1989</a>
-                        <option value="1988">1988</a>
-                        <option value="1987">1987</a>
-                        <option value="1986">1986</a>
-                        <option value="1985">1985</a>
-                        <option value="1984">1984</a>
-                        <option value="1983">1983</a>
-                        <option value="1982">1982</a>
-                        <option value="1981">1981</a>
-                        <option value="1980">1980</a>
-                        <option value="1979">1979</a>
-                        <option value="1978">1978</a>
-                        <option value="1977">1977</a>
-                        <option value="1976">1976</a>
-                        <option value="1975">1975</a>
-                        <option value="1974">1974</a>
-                        <option value="1973">1973</a>
-                        <option value="1972">1972</a>
-                        <option value="1971">1971</a>
-                        <option value="1970">1970</a>
-                        <option value="1969">1969</a>
-                        <option value="1968">1968</a>
-                        <option value="1967">1967</a>
-                        <option value="1966">1966</a>
-                        <option value="1965">1965</a>
-                        <option value="1964">1964</a>
-                        <option value="1963">1963</a>
-                        <option value="1962">1962</a>
-                        <option value="1961">1961</a>
-                        <option value="1960">1960</a>
-                        <option value="1959">1959</a>
-                        <option value="1958">1958</a>
-                        <option value="1957">1957</a>
-                        <option value="1956">1956</a>
-                        <option value="1955">1955</a>
-                        <option value="1954">1954</a>
-                        <option value="1953">1953</a>
-                        <option value="1952">1952</a>
-                        <option value="1951">1951</a>
-                        <option value="1950">1950</a>
-                        <option value="1949">1949</a>
-                        <option value="1948">1948</a>
-                        <option value="1947">1947</a>
-                        <option value="1946">1946</a>
-                        <option value="1945">1945</a>
-                        <option value="1944">1944</a>
-                        <option value="1943">1943</a>
-                        <option value="1942">1942</a>
-                        <option value="1941">1941</a>
-                        <option value="1940">1940</a>
-                        <option value="1939">1939</a>
-                        <option value="1938">1938</a>
-                        <option value="1937">1937</a>
-                        <option value="1936">1936</a>
-                        <option value="1935">1935</a>
-                        <option value="1934">1934</a>
-                        <option value="1933">1933</a>
-                        <option value="1932">1932</a>
-                        <option value="1931">1931</a>
-                        <option value="1930">1930</a>
-                        <option value="1929">1929</a>
-                        <option value="1928">1928</a>
-                        <option value="1927">1927</a>
-                        <option value="1926">1926</a>
-                        <option value="1925">1925</a>
-                        <option value="1924">1924</a>
-                        <option value="1923">1923</a>
-                        <option value="1922">1922</a>
-                        <option value="1921">1921</a>
-                        <option value="1920">1920</a>
-                        <option value="1919">1919</a>
-                        <option value="1918">1918</a>
-                    <!-- {% endfor %} -->
-                </select>        
-    
-                <br> &nbsp; <br>
-    
-                <input type="submit" value="Submit">
-    
-            </form>
-    
-            <div class="denied">
-                Sorry, but you do not meet the minimum age requirement to view this website. 
-            </div>
-        
+      <div class="age">
+          <form>
+  
+              <h2>Caution, this site is EXTREMELY COOL - Please Verify Your Age</h2>
+              
+              <select name="month" id="month">
+                  <option value="0">January</a>
+                  <option value="1">February</a>
+                  <option value="2">March</a>
+                  <option value="3">April</a>
+                  <option value="4">May</a>
+                  <option value="5">June</a>
+                  <option value="6">July</a>
+                  <option value="7">August</a>
+                  <option value="8">September</a>
+                  <option value="9">October</a>
+                  <option value="10">November</a>
+                  <option value="11">December</a>
+              </select>
+  
+              <select name="day" id="day">
+                  {% for day in (1..31) %}
+                      <!-- <option value="{{ day }}">{{ day }}</option> -->
+                      <option value="0">1</a>
+                      <option value="1">2</a>
+                      <option value="2">3</a>
+                      <option value="3">4</a>
+                      <option value="4">5</a>
+                      <option value="5">6</a>
+                      <option value="6">7</a>
+                      <option value="7">8</a>
+                      <option value="8">9</a>
+                      <option value="9">10</a>
+                      <option value="10">11</a>
+                      <option value="11">12</a>
+                      <option value="12">13</a>
+                      <option value="13">14</a>
+                      <option value="14">15</a>
+                      <option value="15">16</a>
+                      <option value="16">17</a>
+                      <option value="17">18</a>
+                      <option value="18">19</a>
+                      <option value="19">20</a>
+                      <option value="20">21</a>
+                      <option value="21">22</a>
+                      <option value="22">23</a>
+                      <option value="23">24</a>
+                      <option value="24">25</a>
+                      <option value="25">26</a>
+                      <option value="26">27</a>
+                      <option value="27">28</a>
+                      <option value="28">29</a>
+                      <option value="29">30</a>
+                      <option value="30">31</a>
+                  <!-- {% endfor %} -->
+              </select>
+  
+                  <!-- {% assign this_year = 'now' | date: "%Y" %} -->
+  
+              <select name="year" id="year">
+                  {% for year in (1900..this_year) %}
+                      <!-- <option value="{{ year }}">{{ year }}</option> -->
+                      <option value="2018">2018</a>
+                      <option value="2017">2017</a>
+                      <option value="2016">2016</a>
+                      <option value="2015">2015</a>
+                      <option value="2014">2014</a>
+                      <option value="2013">2013</a>
+                      <option value="2012">2012</a>
+                      <option value="2011">2011</a>
+                      <option value="2010">2010</a>
+                      <option value="2009">2009</a>
+                      <option value="2008">2008</a>
+                      <option value="2007">2007</a>
+                      <option value="2006">2006</a>
+                      <option value="2005">2005</a>
+                      <option value="2004">2004</a>
+                      <option value="2003">2003</a>
+                      <option value="2002">2002</a>
+                      <option value="2001">2001</a>
+                      <option value="2000">2000</a>
+                      <option value="1999">1999</a>
+                      <option value="1998">1998</a>
+                      <option value="1997">1997</a>
+                      <option value="1996">1996</a>
+                      <option value="1995">1995</a>
+                      <option value="1994">1994</a>
+                      <option value="1993">1993</a>
+                      <option value="1992">1992</a>
+                      <option value="1991">1991</a>
+                      <option value="1990">1990</a>
+                      <option value="1989">1989</a>
+                      <option value="1988">1988</a>
+                      <option value="1987">1987</a>
+                      <option value="1986">1986</a>
+                      <option value="1985">1985</a>
+                      <option value="1984">1984</a>
+                      <option value="1983">1983</a>
+                      <option value="1982">1982</a>
+                      <option value="1981">1981</a>
+                      <option value="1980">1980</a>
+                      <option value="1979">1979</a>
+                      <option value="1978">1978</a>
+                      <option value="1977">1977</a>
+                      <option value="1976">1976</a>
+                      <option value="1975">1975</a>
+                      <option value="1974">1974</a>
+                      <option value="1973">1973</a>
+                      <option value="1972">1972</a>
+                      <option value="1971">1971</a>
+                      <option value="1970">1970</a>
+                      <option value="1969">1969</a>
+                      <option value="1968">1968</a>
+                      <option value="1967">1967</a>
+                      <option value="1966">1966</a>
+                      <option value="1965">1965</a>
+                      <option value="1964">1964</a>
+                      <option value="1963">1963</a>
+                      <option value="1962">1962</a>
+                      <option value="1961">1961</a>
+                      <option value="1960">1960</a>
+                      <option value="1959">1959</a>
+                      <option value="1958">1958</a>
+                      <option value="1957">1957</a>
+                      <option value="1956">1956</a>
+                      <option value="1955">1955</a>
+                      <option value="1954">1954</a>
+                      <option value="1953">1953</a>
+                      <option value="1952">1952</a>
+                      <option value="1951">1951</a>
+                      <option value="1950">1950</a>
+                      <option value="1949">1949</a>
+                      <option value="1948">1948</a>
+                      <option value="1947">1947</a>
+                      <option value="1946">1946</a>
+                      <option value="1945">1945</a>
+                      <option value="1944">1944</a>
+                      <option value="1943">1943</a>
+                      <option value="1942">1942</a>
+                      <option value="1941">1941</a>
+                      <option value="1940">1940</a>
+                      <option value="1939">1939</a>
+                      <option value="1938">1938</a>
+                      <option value="1937">1937</a>
+                      <option value="1936">1936</a>
+                      <option value="1935">1935</a>
+                      <option value="1934">1934</a>
+                      <option value="1933">1933</a>
+                      <option value="1932">1932</a>
+                      <option value="1931">1931</a>
+                      <option value="1930">1930</a>
+                      <option value="1929">1929</a>
+                      <option value="1928">1928</a>
+                      <option value="1927">1927</a>
+                      <option value="1926">1926</a>
+                      <option value="1925">1925</a>
+                      <option value="1924">1924</a>
+                      <option value="1923">1923</a>
+                      <option value="1922">1922</a>
+                      <option value="1921">1921</a>
+                      <option value="1920">1920</a>
+                      <option value="1919">1919</a>
+                      <option value="1918">1918</a>
+                  <!-- {% endfor %} -->
+              </select>        
+  
+              <br> &nbsp; <br>
+  
+              <input type="submit" value="Submit">
+  
+          </form>
+  
+          <div class="denied">
+              Sorry, but you do not meet the minimum age requirement to view this website. 
+          </div>
+      
+      </div>
+  
+  </div>
+  <!-- END OF AGE VERIFICATION MODAL -->
+
+  <!-- Materialize Nav Bar (outside of container for full width) -->
+      <nav>
+        <div class="nav-wrapper red z-depth-5">
+          <a href="#!" class="brand-logo">
+            Marvel</a>
+          <ul class="right hide-on-med-and-down">
+            <li>
+              <a href="sass.html">
+                <i class="material-icons">search</i>
+              </a>
+            </li>
+            <li>
+              <a href="badges.html">
+                <i class="material-icons">view_module</i>
+              </a>
+            </li>
+            <li>
+              <a href="collapsible.html">
+                <i class="material-icons">refresh</i>
+              </a>
+            </li>
+            <li>
+              <a href="mobile.html">
+                <i class="material-icons">more_vert</i>
+              </a>
+            </li>
+          </ul>
         </div>
-    
-    </div>
-    <!-- END OF AGE VERIFICATION MODAL -->
-
-
+      </nav>
+      <br>
 
   <!-- first container, a second container below -->
   <div class="container-fluid">
+          <div class="row">
+            <div id="episode_navbar" class="col-6">
+              <!-- second "Episode" Navi Bar -->
+              <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <h3 class='header2'>Episode</h3>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+                  aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- MIKE changed to episodeNavDropdown so it wont conflict with navbarNavDropdown from above -->
+                <div class="collapse navbar-collapse" id="episodeNavDropdown">
+                  <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false"> Characters</a>
 
-    <div class="row">
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 
-      <div id="full_bar" class="col-12">
-
-        <!-- Top navigation bar full width -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
-<!-- MIKE added h1ID to h1 MARVEL -->
-          <h1 id="h1ID">MARVEL</h1>
-
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
-            aria-expanded="false" aria-label="Toggle navigation">
-
-            <span class="navbar-toggler-icon"></span>
-
-          </button>
-<!-- MIKE added navbar-dark to make the text a light color -->
-          <div class="collapse navbar-collapse navbar-dark" id="navbarNavDropdown">
-
-            <ul class="navbar-nav">
-
-              <li class="nav-item ">
-
-                <a class="nav-link" href="index.html">Home Page
-                  <span class="sr-only">(current)</span>
-
-                </a>
-
-              </li>
-
-              <li class="nav-item ">
-
-                <a class="nav-link" href="#">About this Site</a>
-
-              </li>
-
-              <li class="nav-item ">
-
-                <a class="nav-link" href="#">Contact Us</a>
-
-              </li>
-
-              <li class="nav-item dropdown">
-
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true"
-                  aria-expanded="false">
-
-                  Dropdown
-                </a>
-
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-
-                  <a class="dropdown-item" href="#">Options</a>
-                  <a class="dropdown-item" href="#">Options</a>
-                  <a class="dropdown-item" href="#">Options</a>
-                  <a class="dropdown-item" href="#">Options</a>
-                  <a class="dropdown-item" href="#">Options</a>
-                  <a class="dropdown-item" href="#">Options</a>
-
+                        <a id="dare" class="dropdown-item char" href="#">Daredevil</a>
+                        <a id="spide" class="dropdown-item char" href="#">Spider-Man</a>
+                        <a id="capt" class="dropdown-item char" href="#">Captain America</a>
+                        <a id="mag" class="dropdown-item char" href="#">Magneto</a>
+                        <a id="ven" class="dropdown-item char" href="#">Venom</a>
+                        <a id="wolv" class="dropdown-item char" href="#">Wolverine</a>
+                        <a id="sabre" class="dropdown-item char" href="#">Sabretooth</a>
+                        <a id="hulk" class="dropdown-item char" href="#">Hulk</a>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
+              </nav>
+            </div>
 
-              </li>
-
-            </ul>
-
-          </div>
-
-        </nav>
-
-      </div>
-
-    </div>
-
-    <br>
-
-    <div class="row">
-
-      <div id="episode_navbar" class="col-6">
-
-        <!-- second "Episode" Navi Bar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
-          <h3 class='header2'>Episode</h3>
-
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
-            aria-expanded="false" aria-label="Toggle navigation">
-
-            <span class="navbar-toggler-icon"></span>
-
-          </button>
-<!-- MIKE changed to episodeNavDropdown so it wont conflict with navbarNavDropdown from above -->
-          <div class="collapse navbar-collapse" id="episodeNavDropdown">
-
-            <ul class="navbar-nav">
-
-              <li class="nav-item dropdown">
-
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true"
-                  aria-expanded="false">
-
-                  Characters
-                </a>
-
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-
-                  <a id="dare" class="dropdown-item char" href="#">Daredevil</a>
-                  <a id="spide" class="dropdown-item char" href="#">Spider-Man</a>
-                  <a id="capt" class="dropdown-item char" href="#">Captain America</a>
-                  <a id="mag" class="dropdown-item char" href="#">Magneto</a>
-                  <a id="ven" class="dropdown-item char" href="#">Venom</a>
-                  <a id="wolv" class="dropdown-item char" href="#">Wolverine</a>
-                  <a id="sabre" class="dropdown-item char" href="#">Sabretooth</a>
-                  <a id="hulk" class="dropdown-item char" href="#">Hulk</a>
-                  
-
-
-                </div>
-
-              </li>
-
-            </ul>
-
-          </div>
-
-        </nav>
-
-      </div>
-
-
-      <br>
-      <br>
-      <br>
-      <br>
+            <br>
+            <br>
+            <br>
+            <br>
 
       <!-- new container -->
       <div id="photo_text_card" class="container">
-
         <div class="row">
-
           <!-- row with photo/text card & two video players -->
           <div class="col-4">
-
             <div id="photo_fill" class="card" style="width: 18rem;">
-
-              <img id="cardimage" class="card-img-top portrait" src="https://78.media.tumblr.com/2f92e5d094c732a89d5c9768748688e2/tumblr_mf3q7euz2k1s0qnhlo1_500.gif" alt="image">
-
+              <img id="cardimage" class="card-img-top portrait" src="assets/images/marvelgif.gif"
+                alt="image">
               <div class="card-body">
-
                 <h5 class="card-title charName">Marvel Comics</h5>
-
-                <p id="text_fill" class="card-text description">Marvel Comics is the common name and primary imprint of Marvel Worldwide Inc., formerly Marvel Publishing, Inc. and Marvel Comics Group, a publisher of American comic books and related media. In 2009, The Walt Disney Company acquired Marvel Entertainment, Marvel Worldwide's parent company.
-
-                  Marvel started in 1939 as Timely Publications, and by the early 1950s, had generally become known as Atlas Comics. The Marvel branding began in 1961, the year that the company launched The Fantastic Four and other superhero titles created by Stan Lee, Jack Kirby, Steve Ditko, and many others.
-                  
-                  Marvel counts among its characters such well-known superheroes as Captain America, Iron Man, Thor, Spider-Man, Wolverine, the Hulk, Daredevil, Ghost Rider, Dr. Strange, Punisher, and such teams as the Avengers, the X-Men and the Fantastic Four, and antagonists including Doctor Doom, the Red Skull, the Green Goblin, Thanos, Ultron, Doctor Octopus, Magneto, Venom, and Loki. Most of Marvel's fictional characters operate in a single reality known as the Marvel Universe, with most locations mirroring real-life places; many major characters are based in New York City.</p>
+                <p id="text_fill" class="card-text description">Marvel Comics is the common name and primary imprint of Marvel Worldwide Inc., formerly Marvel Publishing,
+                  Inc. and Marvel Comics Group, a publisher of American comic books and related media. In 2009, The Walt
+                  Disney Company acquired Marvel Entertainment, Marvel Worldwide's parent company. Marvel started in 1939
+                  as Timely Publications, and by the early 1950s, had generally become known as Atlas Comics. The Marvel
+                  branding began in 1961, the year that the company launched The Fantastic Four and other superhero titles
+                  created by Stan Lee, Jack Kirby, Steve Ditko, and many others. Marvel counts among its characters such
+                  well-known superheroes as Captain America, Iron Man, Thor, Spider-Man, Wolverine, the Hulk, Daredevil,
+                  Ghost Rider, Dr. Strange, Punisher, and such teams as the Avengers, the X-Men and the Fantastic Four, and
+                  antagonists including Doctor Doom, the Red Skull, the Green Goblin, Thanos, Ultron, Doctor Octopus, Magneto,
+                  Venom, and Loki. Most of Marvel's fictional characters operate in a single reality known as the Marvel
+                  Universe, with most locations mirroring real-life places; many major characters are based in New York City.</p>
 
                 <a id="photoButton" href="#" class="btn btn-primary">Click Me!</a>
 
               </div>
-
             </div>
-
           </div>
-
-         <div class="col-3">
+          <div class="col-3">
             <!-- Moveable Image -->
-           <img src="" alt="This is a moveable png image with transparent background" class="img moveChar" style="position: absolute; top:110px; z-index: 100; height: 300px">
-           <img src="assets/images/forcefield.png" alt="This is a png forcefield image with transparent background" id="shield" style="display: none; position: absolute; top:110px; z-index: 100; height: 300px">
-         </div>
-
-         <!-- <div id="buttons">
+            <img src="" alt="This is a moveable png image with transparent background" class="img moveChar" style="position: absolute; top:110px; z-index: 100; height: 300px">
+            <img src="assets/images/forcefield.png" alt="This is a png forcefield image with transparent background" id="shield" style="display: none; position: absolute; top:110px; z-index: 100; height: 300px">
+          </div>
+          <!-- <div id="buttons">
           <button id="thisbutton" data-person="Magneto Supervillain">
             We are Homo-Superior!
           </button> -->
-
           <div class="col-5">
 
             <!-- 16:9 aspect ratio video player to append through js -->
             <div class="embed-responsive embed-responsive-16by9">
-
-              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/UhVjp48U2Oc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
+              <iframe id="youtubeOne" class="embed-responsive-item" src="https://www.youtube.com/embed/UhVjp48U2Oc" frameborder="0" allow="autoplay; encrypted-media"
+                allowfullscreen></iframe>
             </div>
 
             <br>
 
             <!-- 16:9 aspect ratio video player to append through js -->
             <div class="embed-responsive embed-responsive-16by9">
-
-              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/QwievZ1Tx-8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-
+              <iframe id="youtubeTwo" class="embed-responsive-item" src="https://www.youtube.com/embed/QwievZ1Tx-8" frameborder="0" allow="autoplay; encrypted-media"
+                allowfullscreen></iframe>
             </div>
 
           </div>
-
         </div>
 
         <br>
 
         <div class="row">
-
           <div class="col-12">
-
             <!--full width amazon results link -->
             <nav class="navbar navbar-light bg-light">
-
               <a class="navbar-brand" href="#">Amazon Results</a>
-
             </nav>
-
           </div>
-
         </div>
 
         <br>
 
         <div id="button_row" class="row">
-
           <div class="col-2">
-
-            <div class="col"><div id="musicControls" class="text-center">
-              <button id="themeSpidey" class="btn btn-warning btn-xs theme-button">
-                <span class="fa fa-music"></span> Spider-Man Theme!</button>
-            </div></div>
-            
+            <div class="col">
+              <div id="musicControls" class="text-center">
+                <button id="themeSpidey" class="btn btn-warning btn-xs theme-button">
+                  <span class="fa fa-music"></span> Spider-Man Theme!</button>
+              </div>
+            </div>
           </div>
 
           <div class="col-2">
-
-            <div class="col"><div id="musicControls" class="text-center">
-              <button id="themeWolverine" class="btn btn-warning btn-xs theme-button">
-                <span class="fa fa-music"></span> Wolverine Theme!</button>
-            </div></div>
-
-          </div>
-
-          <div class="col-2">
-
-            <div class="col"><div id="musicControls" class="text-center">
-              <button id="themeHulk" class="btn btn-warning btn-xs theme-button">
-                <span class="fa fa-music"></span> Hulk Theme!</button>
-            </div></div>
+            <div class="col">
+              <div id="musicControls" class="text-center">
+                <button id="themeWolverine" class="btn btn-warning btn-xs theme-button">
+                  <span class="fa fa-music"></span> Wolverine Theme!</button>
+              </div>
+            </div>
 
           </div>
 
           <div class="col-2">
-
-            <div class="col"><div id="musicControls" class="text-center">
-              <button id="themeMagneto" class="btn btn-warning btn-xs theme-button">
-                <span class="fa fa-music"></span> Magneto Theme!</button>
-            </div></div>
-
-          </div>
-
-          <div class="col-2">
-
-            <div class="col"><div id="musicControls" class="text-center">
-              <button id="themeVenom" class="btn btn-warning btn-xs theme-button">
-                <span class="fa fa-music"></span> Venom Theme!</button>
-            </div></div>
+            <div class="col">
+              <div id="musicControls" class="text-center">
+                <button id="themeHulk" class="btn btn-warning btn-xs theme-button">
+                  <span class="fa fa-music"></span> Hulk Theme!</button>
+              </div>
+            </div>
 
           </div>
 
           <div class="col-2">
-
-            <div class="col"><div id="musicControls" class="text-center">
-              <button id="themeSabre" class="btn btn-warning btn-xs theme-button">
-                <span class="fa fa-music"></span> Sabretooth Theme!</button>
-            </div></div>
+            <div class="col">
+              <div id="musicControls" class="text-center">
+                <button id="themeMagneto" class="btn btn-warning btn-xs theme-button">
+                  <span class="fa fa-music"></span> Magneto Theme!</button>
+              </div>
+            </div>
 
           </div>
 
+          <div class="col-2">
+            <div class="col">
+              <div id="musicControls" class="text-center">
+                <button id="themeVenom" class="btn btn-warning btn-xs theme-button">
+                  <span class="fa fa-music"></span> Venom Theme!</button>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-2">
+            <div class="col">
+              <div id="musicControls" class="text-center">
+                <button id="themeSabre" class="btn btn-warning btn-xs theme-button">
+                  <span class="fa fa-music"></span> Sabretooth Theme!</button>
+              </div>
+            </div>
+
+          </div>
           <div class="col-2" style="display: block; margin-top: 10px; margin-left: auto; margin-right: auto;">
-
-            <div class="col"><div id="musicControls" class="text-center">
-              <button class="btn btn-dark btn-xs pause-button">
-                <span class="fa fa-pause"></span> End Songs</button>
-            </div></div>
-
+            <div class="col">
+              <div id="musicControls" class="text-center">
+                <button class="btn btn-dark btn-xs pause-button">
+                  <span class="fa fa-pause"></span> End Songs</button>
+              </div>
+            </div>
           </div>
-
         </div>
 
         <br>
@@ -498,10 +417,9 @@
         <br>
 
         <div class="row">
-
           <!-- footer (added temp inline styling to make sticky,feel free to style how you'd like) -->
           <div id="footer" class="col-12 ">
-            
+
             <footer style=" 
               width:100%;
               border: 5px ridge darkslategray;
@@ -515,20 +433,25 @@
               left:0; 
               text-align:center;" id="sticky">
               <h4 style="display: inline; float: left; padding-left: 5px; margin-top: 8px; font-style: italic;">Move Controls</h4>
-              <button class="btn btn-dark btn-lg back-button" style="margin-right: 10px; margin-bottom: 2px;">Fly back!</button>
-              <button class="btn btn-dark btn-lg fa fa-arrow-up up-button" style="margin-right: 10px; margin-bottom: 2px;">Up</button>
-              <button class="btn btn-dark btn-lg fa fa-arrow-left left-button" style="margin-right: 10px; margin-bottom: 2px;">Left</button>
-              <button class="btn btn-dark btn-lg fa fa-arrow-down down-button" style="margin-right: 10px; margin-bottom: 2px;">Down</button>
-              <button class="btn btn-dark btn-lg fa fa-arrow-right right-button" style="margin-right: 10px; margin-bottom: 2px;">Right</button>
-              <button class="btn btn-dark btn-lg forcefield-button" style="margin-right: 10px; margin-bottom: 2px;">Magnetize!</button>     
+              <button class="btn btn-dark btn-lg back-button" style="margin-right: 10px; margin-top: 2px; line-height: 5px;">Fly back!</button>
+              <button class="btn btn-dark btn-lg fa fa-arrow-up up-button" style="margin-right: 10px; margin-top: 2px; line-height: 5px;">Up</button>
+              <button class="btn btn-dark btn-lg fa fa-arrow-left left-button" style="margin-right: 10px; margin-top: 2px; line-height: 5px;">Left</button>
+              <button class="btn btn-dark btn-lg fa fa-arrow-down down-button" style="margin-right: 10px; margin-top: 2px; line-height: 5px;">Down</button>
+              <button class="btn btn-dark btn-lg fa fa-arrow-right right-button" style="margin-right: 10px; margin-top: 2px; line-height: 5px;">Right</button>
+              <button class="btn btn-dark btn-lg forcefield-button" style="margin-right: 10px; margin-top: 2px; line-height: 5px;">Magnetize!</button>
             </footer>
-              
+
           </div>
-          
-      </div> <!-- 2nd container end -->
+
+      </div>
+      <!-- 2nd container end -->
 
 
-  </div> <!-- container-fluid end -->
+  </div>
+  <!-- container-fluid end -->
+
+
+
 
 
       <!-- Optional JavaScript -->
@@ -536,6 +459,9 @@
       <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" crossorigin="anonymous"></script>
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+      <script src="assets/materialize.js"></script>
       <script src="assets/marvel.js"></script>
 </body>
 
