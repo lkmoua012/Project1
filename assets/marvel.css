@@ -96,3 +96,196 @@ body {
 #sabretooth {
     margin-left: -22%;
 }
+
+@media only screen and (max-width:1200px) and (min-width:980px) {
+
+    #button_row {
+        width: 85%;
+        margin-left:2%;
+
+    }
+
+    #themeSabre{
+        margin-left: 125%;
+        font-size: 75%;
+    }
+
+    #themeMagneto {
+        margin-left: -60%;
+        font-size: 75%;
+    }
+    #themeVenom {
+        margin-left: 36%;
+        font-size: 75%;
+    }
+
+    #themeHulk {
+        margin-left: -215%;
+        font-size: 75%;
+    }
+
+    #themeWolverine {
+        margin-left: -185%;
+        font-size: 75%;
+    }
+
+    #themeSpidey {
+        margin-left: -395%;
+        font-size: 75%;
+    }
+
+    #end_song {
+        font-size: 70%;
+        margin-left: 425px;
+    }
+
+
+
+
+
+
+
+}
+
+@media only screen and (max-width:979px) and (min-width:768px) {
+
+    #button_row {
+        width: 65%;
+        margin-left: 18%;
+
+    }
+
+    #themeSabre{
+        margin-left: 1525%;
+        font-size: 50%;
+    }
+
+    #themeMagneto {
+        margin-left: -670%;
+        font-size: 50%;
+    }
+    #themeVenom {
+        margin-left: 126%;
+        font-size: 50%;
+    }
+
+    #themeHulk {
+        margin-left: -55px;
+        font-size: 50%;
+    }
+
+    #themeWolverine {
+        margin-left: -119px;
+        font-size: 50%;
+    }
+
+    #themeSpidey {
+        margin-left: -5400%;
+        font-size: 50%;
+    }
+
+    #end_song {
+        font-size: 50%;
+        margin-left: 5410%;
+    }
+
+
+}
+
+@media only screen and (max-width:767px) and (min-width:640px) { 
+
+    #button_row {
+        width: 65%;
+        margin-left: 18%;
+
+    }
+
+    #themeSabre{
+        margin-left: 1525%;
+        font-size: 50%;
+    }
+
+    #themeMagneto {
+        margin-left: -670%;
+        font-size: 50%;
+    }
+    #themeVenom {
+        margin-left: 126%;
+        font-size: 50%;
+    }
+
+    #themeHulk {
+        margin-left: -55px;
+        font-size: 50%;
+    }
+
+    #themeWolverine {
+        margin-left: -119px;
+        font-size: 50%;
+    }
+
+    #themeSpidey {
+        margin-left: -5400%;
+        font-size: 50%;
+    }
+
+    #end_song {
+        font-size: 50%;
+        margin-left: 5410%;
+    }
+
+    @media only screen and (max-width:639px) and (min-width:425px) {
+        #button_row {
+            width: 65%;
+            margin-left: 18%;
+    
+        }
+    
+        #themeSabre{
+            margin-left: 1525%;
+            font-size: 20%;
+        }
+    
+        #themeMagneto {
+            margin-left: -38px;
+            font-size: 20%;
+        }
+        #themeVenom {
+            margin-left: -15px;
+            font-size: 20%;
+        }
+    
+        #themeHulk {
+            margin-left: -46px;
+            font-size: 20%;
+        }
+    
+        #themeWolverine {
+            margin-left: -73px;
+            font-size: 20%;
+        }
+    
+        #themeSpidey {
+            margin-left: -115px;
+            font-size: 20%;
+        }
+    
+        #end_song {
+            font-size: 20%;
+            margin-left: 117px;
+        }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+ } /* end */
